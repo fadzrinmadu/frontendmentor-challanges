@@ -1,0 +1,8 @@
+@mixin title {
+  color: $dark-blue;
+  font-weight: 600;
+}
+
+@mixin borderTop($color) {
+  border-top: 4px solid $color;
+}
