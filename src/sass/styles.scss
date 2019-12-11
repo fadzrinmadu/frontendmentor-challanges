@@ -18,13 +18,14 @@ body {
   font-size: 26px;
   font-weight: 600;
   margin-bottom: 36px;
+  text-transform: uppercase;
   span {
     color: $blue;
   }
 }
 
 .subscribe {
-  h3 {
+  h1 {
     color: $gray;
     font-size: 24px;
   }
@@ -98,6 +99,7 @@ p.copy {
   color: $gray;
   margin-top: 30px;
   font-size: 14px;
+  margin-bottom: 8px;
 }
 
 footer {
@@ -120,7 +122,7 @@ footer {
     font-size: 38px;
   }
   .subscribe {
-    h3 {
+    h1 {
       font-size: 36px;
     }
     p {
