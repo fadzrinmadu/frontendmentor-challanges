@@ -124,8 +124,13 @@ body {
   font-weight: 600;
   box-shadow: 0 4px 8px #c2d3ff;
   margin-top: 12px;
+  transition: 0.3s;
 }
 .subscribe button:hover {
+  color: #4f7df3;
+  background: white;
+  border: 1px solid #4f7df3;
+  box-shadow: none;
   cursor: pointer;
 }
 
@@ -148,6 +153,9 @@ body {
   color: #4f7df3;
   font-size: 16px;
 }
+.social:hover {
+  border: 1px solid #4f7df3;
+}
 
 p.copy {
   color: #969696;
@@ -162,6 +170,9 @@ footer {
   line-height: 1.4;
   margin-top: 64px;
   padding: 0 40px;
+}
+footer .attribution {
+  font-size: 12px;
 }
 
 /* MEDIA QUERIES */

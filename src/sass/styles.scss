@@ -71,7 +71,12 @@ body {
     font-weight: 600;
     box-shadow: 0 4px 8px $paleBlue;
     margin-top: 12px;
+    transition: .3s;
     &:hover {
+      color: $blue;
+      background: white;
+      border: 1px solid $blue;
+      box-shadow: none;
       cursor: pointer;
     }
   }
@@ -93,6 +98,9 @@ body {
   margin-right: 10px;
   color: $blue;
   font-size: 16px;
+  &:hover {
+    border: 1px solid hsla(223, 87%, 63%, 100%);
+  }
 }
 
 p.copy {
@@ -108,6 +116,9 @@ footer {
   line-height: 1.4;
   margin-top: 64px;
   padding: 0 40px;
+  .attribution {
+    font-size: 12px;
+  }
 }
 
 
