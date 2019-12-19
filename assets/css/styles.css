@@ -233,6 +233,9 @@ footer .copy, footer .attribution {
 footer .copy a, footer .attribution a {
   color: white;
 }
+footer .attribution {
+  font-size: 12px;
+}
 
 /* MEDIA QUERIES */
 /* desktop */
