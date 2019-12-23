@@ -97,7 +97,14 @@ footer {
 
 /* desktop */
 @media screen and (min-width: 992px) {
+  body {
+    background: url('../images/bg-desktop.svg') no-repeat;
+    background-size: cover;
+    background-color: $violet;
+  }
+
   header {
+    margin-bottom: 40px;
     .logo {
       img { width: 180px; }
     }

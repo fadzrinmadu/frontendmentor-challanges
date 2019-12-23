@@ -153,6 +153,15 @@ footer a {
 /* MEDIA QUERIES */
 /* desktop */
 @media screen and (min-width: 992px) {
+  body {
+    background: url("../images/bg-desktop.svg") no-repeat;
+    background-size: cover;
+    background-color: #674baf;
+  }
+
+  header {
+    margin-bottom: 40px;
+  }
   header .logo img {
     width: 180px;
   }
