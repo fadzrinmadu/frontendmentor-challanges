@@ -244,6 +244,12 @@ footer .attribution {
     font-size: 18px;
   }
 
+  .wrapper {
+    background: url("../images/bg-hero-desktop.svg") no-repeat;
+    background-color: #ebfbff;
+    background-size: cover;
+  }
+
   .container {
     text-align: left;
   }

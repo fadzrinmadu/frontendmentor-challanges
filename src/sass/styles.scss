@@ -187,6 +187,12 @@ footer {
     font-size: 18px;
   }
 
+  .wrapper {
+    background: url('../images/bg-hero-desktop.svg') no-repeat;
+    background-color: $veryPaleCyan;
+    background-size: cover;
+  }
+
   .container {
     text-align: left;
   }
