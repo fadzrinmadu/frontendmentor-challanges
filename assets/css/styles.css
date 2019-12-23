@@ -1,0 +1,440 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Primary */
+/* Accent */
+/* Neutral */
+body {
+  color: #070439;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  text-align: center;
+  line-height: 1.45;
+}
+
+h1,
+h2,
+h3,
+header > nav,
+button {
+  font-family: "Raleway", sans-serif;
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+h2 {
+  font-size: 18px;
+}
+
+input, button {
+  display: block;
+  width: 100%;
+  height: 40px;
+  margin: auto;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input {
+  margin-bottom: 18px;
+  padding-right: 20px;
+  padding-left: 20px;
+  border: 1px solid #070439;
+}
+input::placeholder {
+  color: #bfbfbf;
+}
+
+button {
+  background: #3065f8;
+  color: #f6f6fe;
+  font-weight: 700;
+  box-shadow: 4px 4px 4px rgba(191, 191, 191, 0.3);
+}
+
+.ilustration {
+  width: 90%;
+  margin: auto;
+  margin-bottom: 40px;
+}
+
+.container {
+  width: 88%;
+  margin: auto;
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 0;
+}
+header .logo {
+  width: 90px;
+}
+header nav {
+  align-self: center;
+}
+header ul {
+  display: flex;
+  align-items: center;
+}
+header li {
+  margin-left: 20px;
+}
+header a {
+  color: inherit;
+  text-decoration: none;
+}
+
+main {
+  margin-top: 60px;
+}
+
+.description p {
+  padding: 0 20px;
+  margin: 20px auto;
+}
+.description form {
+  padding: 0 20px;
+}
+
+.works {
+  position: relative;
+  background: #f6f6fe;
+  margin-top: 140px;
+  padding: 40px 0 60px;
+  border-radius: 10px 10px 0 0;
+}
+.works::before {
+  content: "";
+  background: url("../images/bg-curve-mobile.svg") no-repeat;
+  background-size: cover;
+  display: block;
+  width: 100%;
+  height: 53px;
+  position: absolute;
+  top: -50px;
+}
+.works h2 {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+.works p {
+  text-align: left;
+  margin-bottom: 20px;
+}
+.works a {
+  color: #3c9f8f;
+  display: inline-block;
+  margin: 30px auto;
+  text-decoration: none;
+  border-bottom: 1px solid #3c9f8f;
+  padding-bottom: 4px;
+}
+.works a img {
+  margin-left: 4px;
+  vertical-align: sub;
+}
+.works .testimonial {
+  font-size: 11px;
+  text-align: left;
+  background: white;
+  width: 90%;
+  margin: auto;
+  padding: 20px;
+  box-sizing: border-box;
+  box-shadow: 0 0 16px rgba(191, 191, 191, 0.3);
+  border-radius: 4px;
+}
+.works .testimonial blockquote {
+  margin: 12px auto;
+}
+.works .testimonial blockquote::before {
+  content: url("../images/icon-quotes.svg");
+  display: block;
+}
+.works .testimonial figcaption img {
+  width: 30px;
+  border-radius: 50%;
+  float: left;
+  margin-right: 6px;
+}
+.works .testimonial figcaption small {
+  font-size: 8px;
+}
+
+.started {
+  color: #f6f6fe;
+  background: #585989;
+  padding: 60px 0;
+}
+.started p {
+  margin: 20px auto;
+  padding: 0 20px;
+}
+.started input, .started button {
+  width: 70%;
+  border: none;
+  font-size: 11px;
+}
+.started input {
+  margin-bottom: 10px;
+  padding-right: 14px;
+  padding-left: 14px;
+}
+.started button {
+  box-shadow: none;
+}
+
+footer {
+  color: #f6f6fe;
+  background: #070439;
+  text-align: left;
+  padding: 60px 0;
+}
+footer .logo {
+  filter: grayscale(1) brightness(0) invert(1);
+  margin-bottom: 30px;
+}
+footer .contact li {
+  margin-bottom: 16px;
+}
+footer .contact img {
+  margin-right: 20px;
+  vertical-align: sub;
+}
+footer nav {
+  margin: 40px 0;
+}
+footer nav ul {
+  margin: 40px 0;
+}
+footer nav li {
+  margin-bottom: 16px;
+}
+footer .social-media {
+  font-size: 11px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+footer .social-media li {
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  border-radius: 50%;
+  text-align: center;
+  border: 1px solid #f6f6fe;
+}
+footer .social-media li a {
+  color: #f6f6fe;
+}
+footer .social-media li:nth-child(2) {
+  margin: 0 10px;
+}
+footer .attribution {
+  text-align: center;
+  font-size: 10px;
+}
+footer .attribution a {
+  color: #f6f6fe;
+}
+
+/* MEDIA QUERIES */
+/* desktop */
+@media screen and (min-width: 992px) {
+  body {
+    font-size: 16px;
+    text-align: left;
+  }
+
+  h1, h2 {
+    font-size: 32px;
+  }
+
+  input, button {
+    height: 46px;
+  }
+
+  header .logo {
+    width: 120px;
+  }
+
+  .description,
+.works > .container,
+.started > .container {
+    display: grid;
+    grid-template-columns: 42% 58%;
+    justify-content: space-between;
+  }
+  .description .content,
+.works > .container .content,
+.started > .container .content {
+    grid-column: 1/2;
+    grid-row: 1;
+  }
+
+  .works > .container {
+    grid-template-columns: 50% 50%;
+  }
+
+  .description h1 {
+    margin-top: 90px;
+  }
+  .description p {
+    padding: 0;
+  }
+  .description form {
+    padding: 0;
+  }
+  .description input, .description button {
+    display: inline-block;
+  }
+  .description input {
+    width: 52%;
+  }
+  .description button {
+    width: 38%;
+    margin-left: 2%;
+  }
+
+  .works {
+    margin-top: 240px;
+    padding: 40px 0 100px;
+  }
+  .works::before {
+    background: url("../images/bg-curve-desktop.svg") no-repeat;
+    height: 114px;
+    top: -110px;
+  }
+  .works p {
+    padding-right: 60px;
+  }
+  .works a {
+    margin: 0;
+    margin-bottom: 40px;
+  }
+  .works .testimonial {
+    margin: 0;
+    width: 54%;
+    font-size: 14px;
+  }
+  .works .testimonial h3 {
+    font-size: 12px;
+    margin-bottom: -6px;
+  }
+
+  .started {
+    padding: 80px 0;
+  }
+  .started p {
+    padding: 0;
+  }
+  .started form {
+    align-self: center;
+  }
+  .started input {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+  .started input::placeholder {
+    font-size: 14px;
+  }
+  .started button {
+    margin-left: 206px;
+    width: 30%;
+  }
+
+  footer .info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+  }
+  footer .info nav, footer .info ul {
+    margin: 0;
+  }
+  footer .info nav {
+    display: flex;
+    justify-content: space-between;
+  }
+  footer .info nav ul {
+    align-content: center;
+  }
+  footer .social-media {
+    font-size: 12px;
+  }
+  footer .social-media li {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+  }
+  footer .social-media li:nth-child(2) {
+    margin: 0 16px;
+  }
+  footer .attribution {
+    margin-top: 40px;
+    font-size: 11px;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
