@@ -393,6 +393,9 @@ footer .attribution a {
   .started form {
     align-self: center;
   }
+  .started input, .started button {
+    font-size: 13px;
+  }
   .started input {
     margin-right: 0;
     margin-bottom: 10px;

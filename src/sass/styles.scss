@@ -321,6 +321,9 @@ footer {
     padding: 80px 0;
     p { padding: 0;  }
     form { align-self: center; }
+    input, button {
+      font-size: 13px;
+    }
     input {
       margin-right: 0;
       margin-bottom: 10px;
