@@ -1,0 +1,162 @@
+@import 'reset';
+@import 'variables';
+
+body {
+  color: $grayishBlue;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  text-align: center;
+  background: $veryLightGrayishBlue url('../images/bg-top.svg') no-repeat;
+  background-position: 52vw -35px;
+}
+
+.container {
+  width: 86%;
+  margin: auto;
+  padding: 60px 0;
+}
+
+h1 {
+  font-size: 26px;
+  margin-bottom: 30px;
+}
+
+span {
+  color: $lightGrayishBlue;
+}
+
+.switch {
+  position: relative;
+  top: 10px;
+  display: inline-block;
+  width: 54px;
+  height: 30px;
+  margin: 0 20px;
+  background-image: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  border-radius: 20px;
+  &:hover {
+    cursor: pointer;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background-color: white;
+    top: 4px;
+    left: 4px;
+    transition: all 0.3s;
+  }
+}
+
+.checkbox {
+  display: none;
+  &:checked + .switch::after { left: 28px; }
+  &:checked ~ .pricing .basic-price::before { content: '$19.99'; }
+  &:checked ~ .pricing .professional-price::before { content: '$24.99'; }
+  &:checked ~ .pricing .master-price::before { content: '$39.99'; }
+  ~ .pricing .basic-price::before { content: '$199.99'; }
+  ~ .pricing .professional-price::before { content: '$249.99'; }
+  ~ .pricing .master-price::before { content: '$399.99'; }
+}
+
+.pricing {
+  margin-top: 60px;
+  section {
+    width: 100%;
+    box-sizing: border-box;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 16px hsl(234, 14%, 74%, 32%);
+    margin: 30px auto;
+    padding: 40px;
+    &:nth-child(2) {
+      color: white;
+      background-image: linear-gradient(to bottom, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+      .price { 
+        color: inherit; 
+      }
+      a {
+        color: hsl(237, 63%, 64%);
+        background: white;
+        &:hover {
+          color: white;
+          background: hsl(237, 63%, 64%);
+          border: 1px solid white;
+        }
+      }
+    }
+  }
+  h2 { font-size: 18px; }
+  .price {
+    color: $darkGrayishBlue;
+    margin-top: 30px;
+    font-size: 62px;
+    &::first-letter {
+      font-size: 36px;
+      vertical-align: 8px;
+    }
+  }
+  ul { margin: 30px 0; }
+  li {
+    padding: 18px 0;
+    border-top: 1px solid $lightGrayishBlue;
+    &:last-child { border-bottom: 1px solid $lightGrayishBlue; }
+  }
+  a {
+    height: 48px;
+    display: block;
+    background-image: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    color: white;
+    padding: 16px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    text-decoration: none;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 13px;
+    &:hover {
+      color: hsl(237, 63%, 64%);
+      background: white;
+      border: 1px solid hsl(237, 63%, 64%);
+    }
+  }
+}
+
+.attribution {
+  font-size: 12px;
+  line-height: 1.4;
+  margin-top: 40px;
+  a { color: hsl(237, 63%, 64%); }
+}
+
+/* MEDIA QUERIES */
+
+/* desktop */
+@media screen and (min-width: 992px) {
+  body {
+    background-image: url('../images/bg-top.svg'), url('../images/bg-bottom.svg');
+    background-repeat: no-repeat;
+    background-position: right top, left bottom;
+  }
+
+  .pricing {
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+    section {
+      margin: 0;
+      min-width: 200px;
+      .price {
+        font-size: 5vw;
+      }
+      &:nth-child(2) {
+        padding: 60px;
+        margin-top: -20px;
+        // height: 440px;
+      }
+    }
+  }
+}
