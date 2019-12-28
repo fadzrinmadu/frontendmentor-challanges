@@ -1,0 +1,339 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Primary */
+/* neutral */
+body {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: 16px;
+  color: #4c545d;
+  background: url("../images/bg-header-mobile.png") no-repeat;
+  background-size: contain;
+}
+
+h1 {
+  font-size: 32px;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+p {
+  color: #9fabb2;
+  margin: 12px auto 40px;
+}
+
+h1, h2, h3 {
+  font-weight: bold;
+}
+
+h1, h2, h3, p {
+  line-height: 1.4;
+}
+
+.cta {
+  color: #fff;
+  display: block;
+  width: 100%;
+  height: 50px;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 50px;
+  text-decoration: none;
+  border-radius: 40px;
+}
+.cta.ios {
+  background: #26baa4;
+  margin-bottom: 20px;
+  box-shadow: 0 -2px 2px #1d907f inset;
+}
+.cta.ios:hover {
+  background: rgba(38, 186, 164, 0.8);
+}
+.cta.mac {
+  background: #6173ff;
+  box-shadow: 0 -2px 2px #2e46ff inset;
+}
+.cta.mac:hover {
+  background: rgba(97, 115, 255, 0.8);
+}
+
+.ilustration {
+  width: 100%;
+  margin-bottom: 60px;
+}
+
+.container {
+  width: 82%;
+  margin: auto;
+  text-align: center;
+}
+
+section {
+  margin-bottom: 180px;
+}
+
+.history .logo {
+  margin: 120px auto 60px;
+}
+
+.clipboard {
+  margin-bottom: 40px;
+}
+
+.workflow ul {
+  margin-top: 100px;
+}
+.workflow img {
+  margin: 30px 0;
+}
+
+.partner li {
+  margin-bottom: 60px;
+}
+
+.download {
+  margin-top: 180px;
+}
+
+footer {
+  background: #f4f5f6;
+  text-align: center;
+  padding: 60px 60px 30px;
+}
+footer .logo-footer {
+  margin-bottom: 40px;
+}
+footer .logo-footer img {
+  width: 60px;
+}
+footer nav {
+  font-size: 18px;
+}
+footer nav li {
+  margin: 30px auto;
+}
+footer nav a {
+  color: #4c545d;
+  text-decoration: none;
+}
+footer nav a:hover {
+  color: #26baa4;
+}
+footer .social {
+  display: flex;
+  justify-content: center;
+  margin: 50px 0;
+}
+footer .social li:nth-child(2) {
+  margin: 0 40px;
+}
+footer .attribution {
+  margin: 0;
+  font-size: 12px;
+}
+footer .attribution a {
+  color: #4c545d;
+}
+
+/* MEDIA QUERIES */
+/* desktop */
+@media screen and (min-width: 992px) {
+  body {
+    font-size: 18px;
+    background: url("../images/bg-header-desktop.png") no-repeat;
+  }
+
+  h1 {
+    font-size: 42px;
+  }
+
+  h2 {
+    font-size: 34px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  .cta {
+    width: 210px;
+    display: inline-block;
+  }
+  .cta.ios {
+    margin-right: 10px;
+  }
+
+  .history p {
+    padding: 0 20%;
+  }
+
+  .snippet p {
+    padding: 0 18%;
+  }
+  .snippet .row {
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .snippet .col:first-child {
+    position: relative;
+  }
+  .snippet .col:first-child img {
+    position: absolute;
+    width: 130%;
+    left: -30%;
+  }
+  .snippet .col:last-child {
+    text-align: left;
+    padding: 2% 18%;
+  }
+  .snippet .col:last-child li {
+    margin-top: 14%;
+  }
+  .snippet .col:last-child p {
+    font-size: 16px;
+    padding: 0;
+  }
+
+  .clipboard {
+    margin-top: 280px;
+  }
+  .clipboard p {
+    padding: 0 18%;
+    margin-bottom: 80px;
+  }
+  .clipboard .ilustration {
+    width: 80%;
+  }
+
+  .workflow {
+    margin-bottom: 120px;
+  }
+  .workflow ul {
+    display: grid;
+    grid-template-columns: repeat(3, 30%);
+    justify-content: space-between;
+    margin-top: 40px;
+  }
+  .workflow ul p {
+    font-size: 16px;
+  }
+
+  .partner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .download {
+    margin-top: 120px;
+  }
+  .download p {
+    padding: 0 18%;
+  }
+
+  footer {
+    padding: 50px 0 30px;
+  }
+
+  footer > .container {
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    text-align: left;
+  }
+  footer > .container .logo-footer {
+    margin: 0;
+    align-self: center;
+  }
+  footer > .container .logo-footer img {
+    width: 60px;
+  }
+  footer > .container nav {
+    align-self: center;
+  }
+  footer > .container nav ul {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 80px;
+  }
+  footer > .container nav li {
+    width: 120px;
+    margin: 10px 0;
+  }
+  footer > .container .social {
+    justify-content: flex-end;
+    align-self: center;
+    margin: 0;
+  }
+  footer > .container .social li {
+    text-align: right;
+  }
+  footer > .container .social li:nth-child(2) {
+    margin: 0 20px;
+  }
+  footer > .container .attribution {
+    grid-row: 2;
+    grid-column: 1/span 3;
+    margin-top: 30px;
+    text-align: center;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
