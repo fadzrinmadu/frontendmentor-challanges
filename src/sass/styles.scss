@@ -9,80 +9,97 @@ header {
   align-items: center;
   font-weight: bold;
   font-size: 14px;
-  position: relative;
   min-height: 80px;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 9999;
   .logo { object-fit: contain; }
-  .nav-header {
+  .checkbox { 
     display: none;
-    background: url('../images/bg-pattern-mobile-nav.svg') no-repeat;
-    background-position: center bottom;
-    @include mQ($large) {
-      display: block;
-      background: none;
-    }
-    ul {
-      @include mQ($large) {
-        display: flex;
-        align-items: center;
+    @include mQ(0, ($medium - 1)) {
+      &:checked ~ .open-nav { display: none; }
+      &:checked ~ .close-nav { display: block; }
+      &:checked ~ .nav-header {
+        display: block;
+        position: absolute;
+        top: 80px;
+        right: 0;
+        left: 0;
+        z-index: 9999;
+        height: 600px;
+        background-color: $veryDarkViolet;
       }
     }
-    li {
-      margin-top: 40px;
-      text-transform: uppercase;
-      @include mQ($large) {
-        margin: 0 10px;
-      }
-    }
-    a {
-      color: $veryLightGray;
-      text-decoration: none;
-      &:hover {
-        color: $darkViolet;
-      }
-      @include mQ($large) {
-        color: $darkGrayishViolet;
-      }
-    }
-    .btn {
-      margin-top: 40px;
-      width: 80%;
-      height: 46px;
-      line-height: 46px;
-      font-size: 1em;
-      background-color: inherit;
-      &:hover {
-        background-color: $darkViolet;
-        color: $veryLightGray;
-        border-color: $darkViolet;
-      }
-      @include mQ($large) {
-        width: 120px;
-        height: 34px;
-        line-height: 34px;
-        margin-top: 0;
-        border: 2px solid $darkGrayishViolet;
-      }
-    }
-    &:target {
-      display: initial;
-      position: absolute;
-      top: 80px;
-      right: 0;
-      left: 0;
-      z-index: 9999;
-      height: 150vw;
-      background-color: $veryDarkViolet;
-      & ~ a.toogle-open { display: none; }
-      & ~ a.toogle-close { display: initial; }
-    }
-    & ~ a.toogle-open { display: initial; }
-    & ~ a.toogle-close { display: none; }
   }
-  @include mQ($large) {
-    .toogle-open,
-    .toogle-close {
-      display: none !important;
-    } 
+  label { 
+    cursor: pointer; 
+  }
+  .open-nav {
+    display: block;
+    @include mQ($medium) {
+      display: none;
+    }
+  }
+  .close-nav {
+    display: none;
+    @include mQ($medium) {
+      display: none;
+    }
+  }
+}
+
+.nav-header {
+  display: none;
+  background: url('../images/bg-pattern-mobile-nav.svg') no-repeat;
+  background-size: 100% 218px;
+  background-position: center bottom;
+  @include mQ($medium) {
+    display: block;
+    background: none;
+  }
+  ul {
+    @include mQ($medium) {
+      display: flex;
+      align-items: center;
+    }
+  }
+  li {
+    margin-top: 40px;
+    text-transform: uppercase;
+    @include mQ($medium) {
+      margin: 0 10px;
+    }
+  }
+  a {
+    color: $veryLightGray;
+    text-decoration: none;
+    &:hover { color: $darkViolet; }
+    @include mQ($medium) {
+      color: $darkGrayishViolet;
+    }
+  }
+  .btn {
+    margin-top: 40px;
+    width: 80%;
+    height: 46px;
+    line-height: 46px;
+    font-size: 1em;
+    background-color: inherit;
+    &:hover {
+      background-color: $darkViolet;
+      color: $veryLightGray;
+      border-color: $darkViolet;
+    }
+    @include mQ($medium) {
+      width: 120px;
+      height: 34px;
+      line-height: 34px;
+      margin-top: 0;
+      border: 2px solid $darkGrayishViolet;
+    }
   }
 }
 
@@ -92,6 +109,7 @@ header {
   color: $veryLightGray;
   position: relative;
   min-height: 580px;
+  margin-top: 80px;
   @include mQ($large) {
     grid-template-columns: repeat(2, 1fr);
   }

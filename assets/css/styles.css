@@ -115,51 +115,98 @@ header {
   align-items: center;
   font-weight: bold;
   font-size: 14px;
-  position: relative;
   min-height: 80px;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 9999;
 }
 header .logo {
   object-fit: contain;
 }
-header .nav-header {
+header .checkbox {
+  display: none;
+}
+@media screen and (min-width: 0) and (max-width: 767px) {
+  header .checkbox:checked ~ .open-nav {
+    display: none;
+  }
+  header .checkbox:checked ~ .close-nav {
+    display: block;
+  }
+  header .checkbox:checked ~ .nav-header {
+    display: block;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    left: 0;
+    z-index: 9999;
+    height: 600px;
+    background-color: #2b272f;
+  }
+}
+header label {
+  cursor: pointer;
+}
+header .open-nav {
+  display: block;
+}
+@media screen and (min-width: 768px) {
+  header .open-nav {
+    display: none;
+  }
+}
+header .close-nav {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  header .close-nav {
+    display: none;
+  }
+}
+
+.nav-header {
   display: none;
   background: url("../images/bg-pattern-mobile-nav.svg") no-repeat;
+  background-size: 100% 218px;
   background-position: center bottom;
 }
-@media screen and (min-width: 992px) {
-  header .nav-header {
+@media screen and (min-width: 768px) {
+  .nav-header {
     display: block;
     background: none;
   }
 }
-@media screen and (min-width: 992px) {
-  header .nav-header ul {
+@media screen and (min-width: 768px) {
+  .nav-header ul {
     display: flex;
     align-items: center;
   }
 }
-header .nav-header li {
+.nav-header li {
   margin-top: 40px;
   text-transform: uppercase;
 }
-@media screen and (min-width: 992px) {
-  header .nav-header li {
+@media screen and (min-width: 768px) {
+  .nav-header li {
     margin: 0 10px;
   }
 }
-header .nav-header a {
+.nav-header a {
   color: #fafafa;
   text-decoration: none;
 }
-header .nav-header a:hover {
+.nav-header a:hover {
   color: #2d2640;
 }
-@media screen and (min-width: 992px) {
-  header .nav-header a {
+@media screen and (min-width: 768px) {
+  .nav-header a {
     color: #837d87;
   }
 }
-header .nav-header .btn {
+.nav-header .btn {
   margin-top: 40px;
   width: 80%;
   height: 46px;
@@ -167,46 +214,18 @@ header .nav-header .btn {
   font-size: 1em;
   background-color: inherit;
 }
-header .nav-header .btn:hover {
+.nav-header .btn:hover {
   background-color: #2d2640;
   color: #fafafa;
   border-color: #2d2640;
 }
-@media screen and (min-width: 992px) {
-  header .nav-header .btn {
+@media screen and (min-width: 768px) {
+  .nav-header .btn {
     width: 120px;
     height: 34px;
     line-height: 34px;
     margin-top: 0;
     border: 2px solid #837d87;
-  }
-}
-header .nav-header:target {
-  display: initial;
-  position: absolute;
-  top: 80px;
-  right: 0;
-  left: 0;
-  z-index: 9999;
-  height: 150vw;
-  background-color: #2b272f;
-}
-header .nav-header:target ~ a.toogle-open {
-  display: none;
-}
-header .nav-header:target ~ a.toogle-close {
-  display: initial;
-}
-header .nav-header ~ a.toogle-open {
-  display: initial;
-}
-header .nav-header ~ a.toogle-close {
-  display: none;
-}
-@media screen and (min-width: 992px) {
-  header .toogle-open,
-header .toogle-close {
-    display: none !important;
   }
 }
 
@@ -216,6 +235,7 @@ header .toogle-close {
   color: #fafafa;
   position: relative;
   min-height: 580px;
+  margin-top: 80px;
 }
 @media screen and (min-width: 992px) {
   .intro {
