@@ -1,8 +1,11 @@
-@mixin title {
-  color: $dark-blue;
-  font-weight: 600;
+@mixin tablet-style {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
 }
 
-@mixin borderTop($color) {
-  border-top: 4px solid $color;
+@mixin desktop-style {
+  @media screen and (min-width: 992px) {
+    @content;
+  }
 }
