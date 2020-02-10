@@ -66,7 +66,7 @@ h1 {
 }
 @media screen and (min-width: 992px) {
   h1 {
-    font-size: 3.2em;
+    font-size: 4em;
     line-height: 1.2;
   }
 }
@@ -94,16 +94,6 @@ p {
   color: #f96262;
 }
 
-html, body {
-  overflow-x: hidden;
-}
-@media screen and (min-width: 992px) {
-  html, body {
-    height: 100vh;
-    overflow-y: hidden;
-  }
-}
-
 body {
   background-color: #fefaf9;
 }
@@ -116,7 +106,6 @@ body {
     display: grid;
     grid-template-columns: repeat(2, auto);
     margin-top: 0;
-    height: 100vh;
   }
 }
 
@@ -162,6 +151,8 @@ header img {
   .hero {
     grid-row: 1;
     grid-column: 2/3;
+    height: 100vh;
+    margin-bottom: 0;
   }
 }
 .hero img {
@@ -170,7 +161,7 @@ header img {
 @media screen and (min-width: 992px) {
   .hero img {
     width: auto;
-    height: 100vh;
+    height: 100%;
   }
 }
 
@@ -190,7 +181,7 @@ main {
 @media screen and (min-width: 992px) {
   main {
     text-align: left;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
   }
 }
 main h1 {
@@ -198,7 +189,7 @@ main h1 {
 }
 @media screen and (min-width: 992px) {
   main h1 {
-    margin-top: 80px;
+    margin-top: 70px;
     margin-bottom: 20px;
   }
 }
@@ -262,6 +253,11 @@ main button:hover {
 
 footer .attribution {
   margin-bottom: 40px;
+}
+@media screen and (min-width: 992px) {
+  footer .attribution {
+    margin-bottom: 0;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

@@ -10,15 +10,12 @@
     display: grid;
     grid-template-columns: repeat(2, auto);
     margin-top: 0;
-    height: 100vh;
   }
 }
 
 .container {
   padding: 0 30px;
-  @include desktopStyles {
-    padding: 40px 300px 0 160px;
-  }
+  @include desktopStyles { padding: 40px 300px 0 160px }
 }
 
 header {
@@ -42,12 +39,14 @@ header {
   @include desktopStyles {
     grid-row: 1;
     grid-column: 2/3;
+    height: 100vh;
+    margin-bottom: 0;
   }
   img {
     width: 100%;
     @include desktopStyles {
       width: auto;
-      height: 100vh;
+      height: 100%;
     }
   }
 }
@@ -66,12 +65,12 @@ main {
   margin-bottom: 94px;
   @include desktopStyles {
     text-align: left;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
   }
   h1 { 
     margin-bottom: 30px;
     @include desktopStyles {
-      margin-top: 80px;
+      margin-top: 70px;
       margin-bottom: 20px;
     }
   }
@@ -131,5 +130,8 @@ main {
 footer {
   .attribution { 
     margin-bottom: 40px;
+    @include desktopStyles {
+      margin-bottom: 0;
+    }
   }
 }
