@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
   
   const form = document.querySelector('form');
-  const inputEmail = document.querySelector('#email');
+  const inputEmail = document.querySelector('input[name="email"]');
 
   form.addEventListener('submit', function(e) {
     e.preventDefault();

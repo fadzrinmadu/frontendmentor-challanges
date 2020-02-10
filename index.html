@@ -20,40 +20,34 @@
   </script>
 </head>
 <body>
-
+  
   <div class="wrapper">
+    <header class="container">
+      <img src="assets/images/logo.svg" alt="logo">
+    </header>
 
-    <div class="hero">
+    <section class="hero">
       <picture>
         <source srcset="assets/images/hero-desktop.jpg" media="(min-width: 992px)">
-        <img src="assets/images/hero-mobile.jpg" alt="hero">
+        <img src="assets/images/hero-mobile.jpg" alt="hero banner">
       </picture>
-    </div>
+    </section>
 
-    <div class="content container">
-      <header>
-        <div class="logo">
-          <img src="assets/images/logo.svg" alt="logo">
-        </div>
-      </header>
+    <main class="container">
+      <h1>We're <span>Coming Soon</span></h1>
+      <p>Hello fellow shoppers! We're currently building our new fashion store. Add your email below to stay up-to-date with announcements and our launch deals.</p>
+      <form>
+        <input type="text" name="email" placeholder="Email Address" autocomplete="off" aria-label="email"/>
+        <button><img src="assets/images/icon-arrow.svg" alt="arrow"></button>
+      </form>
+    </main>
 
-      <main>
-        <h1>We're <span>Coming Soon</span></h1>
-        <p>Hello fellow shoppers! We're currently building our new fashion store. Add your email below to stay up-to-date with announcements and our launch deals.</p>
-        <form>
-          <input type="text" name="email" id="email" placeholder="Email Address" autocomplete="off" aria-label="email"/>
-          <button><img src="assets/images/icon-arrow.svg" alt="arrow"></button>
-        </form>
-      </main>
-
-      <footer>
-        <p class="attribution">
-          Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-          Coded by <a href="https://github.com/fadzrinmadu">Muhammad Fadzrin Madu</a>.
-        </p>
-      </footer>
-    </div>
-
+    <footer class="container">
+      <p class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Coded by <a href="https://github.com/fadzrinmadu">Muhammad Fadzrin Madu</a>.
+      </p>
+    </footer>
   </div>
 
 <script src="assets/js/script.js"></script> 

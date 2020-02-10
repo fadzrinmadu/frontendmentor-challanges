@@ -2,124 +2,124 @@
 @import '_variables';
 @import '_mixins.scss';
 @import '_fonts.scss';
-@import '_default.scss';
+
+body {
+  background-color: #fefaf9;
+}
 
 .wrapper {
-  margin-top: 85px;
-  @include desktopStyles {
-    display: grid;
-    grid-template-columns: repeat(2, auto);
-    margin-top: 0;
+  display: grid;
+  grid-template-columns: 100%;
+  @include mQ($lg) {
+    grid-template-columns: 52% 48%;
+    grid-template-areas:
+    "header hero"
+    "main hero"
+    "footer hero";
   }
 }
 
 .container {
-  padding: 0 30px;
-  @include desktopStyles { padding: 40px 300px 0 160px }
+  padding: 30px;
+  @include mQ($lg) {
+    padding: 8vh 32% 1vh 120px;
+  }
 }
 
 header {
-  margin: 30px 0;
-  background: #fffdfe;
-  position: absolute;
-  top: 0;
-  @include desktopStyles {
-    position: relative;
+  background-color: #fff;
+  @include mQ($lg) {
+    grid-area: header;
     background: transparent;
   }
   img {
-    width: 96px;
-    @include tabletStyles { width: 120px }
-    @include desktopStyles { width: 158px }
-  }
-}
-
-.hero {
-  margin-bottom: 65px;
-  @include desktopStyles {
-    grid-row: 1;
-    grid-column: 2/3;
-    height: 100vh;
-    margin-bottom: 0;
-  }
-  img {
-    width: 100%;
-    @include desktopStyles {
-      width: auto;
-      height: 100%;
+    width: 100px;
+    @include mQ($sm) {
+      width: 152px;
     }
   }
 }
 
-.content {
-  @include desktopStyles {
-    grid-row: 1;
-    grid-column: 1/2;
-    background: url('../images/bg-pattern-desktop.svg') no-repeat;
-    background-size: cover;
+.hero {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  @include mQ($sm) {
+    height: 450px;
+  }
+  @include mQ($lg) {
+    grid-area: hero;
+    height: auto;
+  }
+  img {
+    width: 100%;
   }
 }
 
 main {
   text-align: center;
-  margin-bottom: 94px;
-  @include desktopStyles {
+  margin-top: 40px;
+  @include mQ($lg) {
+    grid-area: main;
     text-align: left;
-    margin-bottom: 40px;
+    margin-top: 0;
   }
-  h1 { 
-    margin-bottom: 30px;
-    @include desktopStyles {
-      margin-top: 70px;
-      margin-bottom: 20px;
+  p {
+    margin: 20px 0;
+    @include mQ($lg) {
+      margin: 2vw 0;
     }
   }
   form {
-    margin-top: 40px;
     width: 100%;
-    height: 46px;
+    height: 50px;
     position: relative;
     border-radius: 40px;
     box-sizing: border-box;
-    @include tabletStyles {
-      height: 50px;
-    }
     span {
       color: $softRed;
-      display: block;
-      margin-top: 10px;
-      padding-left: 20px;
+      display: inline-block;
+      margin: 10px auto;
     }
   }
-  input, button { outline: none; }
   input {
     width: 100%;
     height: 100%;
+    background: transparent;
     border: 1px solid $desaturatedRed;
     border-radius: inherit;
+    outline: none;
     box-sizing: border-box;
     padding: 0 120px 0 30px;
-    background: inherit;
-    &::placeholder { color: $desaturatedRed; }
-  }
-  input.invalid {
-    background-image: url('../images/icon-error.svg');
-    background-repeat: no-repeat;
-    background-position: right 100px center;
-    border: 2px solid $softRed;
-    padding-right: 130px;
+    &::placeholder { 
+      color: $desaturatedRed 
+    }
+    &.invalid {
+      background-image: url('../images/icon-error.svg');
+      background-repeat: no-repeat;
+      background-position: right 70px center;
+      border: 2px solid $softRed;
+      padding-right: 110px;
+      @include mQ($lg) {
+        background-position: right 90px center;
+        padding-right: 120px;
+      }
+    }
   }
   button {
     position: absolute;
     top: 0;
     right: 0;
-    width: 90px;
+    width: 70px;
     height: 100%;
     border: none;
     border-radius: inherit;
+    outline: none;
     background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
     box-shadow: 0 16px 32px hsla(0, 36%, 70%, 46%);
-    transition: 3s;
+    @include mQ($sm) {
+      width: 90px;
+    }
     &:hover {
       cursor: pointer;
       background-image: linear-gradient(135deg, hsl(0, 80%, 86%) 100%, hsl(0, 74%, 74%));
@@ -128,10 +128,17 @@ main {
 }
 
 footer {
+  @include mQ($lg) {
+    grid-area: footer;
+    &.container {
+      padding: 0 120px;
+    }
+  }
   .attribution { 
     margin-bottom: 40px;
-    @include desktopStyles {
-      margin-bottom: 0;
+    @include mQ($lg) {
+      text-align: left;
+      margin: 10px 0;
     }
   }
 }

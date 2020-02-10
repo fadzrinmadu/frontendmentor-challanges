@@ -1,11 +1,5 @@
-@mixin tabletStyles {
-  @media screen and (min-width: 768px) {
-    @content;
-  }
-}
-
-@mixin desktopStyles {
-  @media screen and (min-width: 992px) {
+@mixin mQ($point: 375px) {
+  @media screen and (min-width: $point) {
     @content;
   }
 }
