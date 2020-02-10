@@ -53,10 +53,52 @@ table {
 }
 
 body {
-  background-color: #fff;
   color: #a3a5ae;
   font-family: "Poppins", sans-serif;
   font-size: 15px;
+}
+
+h1 {
+  color: #4c4e61;
+  font-size: 1.6em;
+  font-weight: 200;
+  line-height: 1.4;
+}
+@media screen and (min-width: 992px) {
+  h1 {
+    font-size: 2.4em;
+  }
+}
+h1 span {
+  color: #4c4e61;
+  font-weight: 600;
+}
+
+h2 {
+  color: #4c4e61;
+  font-weight: 600;
+  font-size: 1.2em;
+}
+
+.leading {
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+p {
+  font-size: 0.86em;
+  line-height: 1.6;
+}
+
+.attribution {
+  font-size: 0.7em;
+}
+.attribution a {
+  color: #549ef2;
+}
+
+body {
+  background-color: #fff;
 }
 @media screen and (min-width: 992px) {
   body {
@@ -73,29 +115,14 @@ body {
   margin-bottom: 60px;
 }
 .title h1 {
-  color: #4c4e61;
-  font-size: 1.6em;
-  font-weight: 200;
   margin-bottom: 20px;
-  line-height: 1.4;
-}
-@media screen and (min-width: 992px) {
-  .title h1 {
-    font-size: 2.4em;
-  }
 }
 .title span {
   display: block;
-  color: #4c4e61;
-  font-weight: 600;
-}
-.title p {
-  font-size: 1em;
-  line-height: 1.5;
 }
 @media screen and (min-width: 992px) {
-  .title p {
-    padding: 0 28%;
+  .title .leading {
+    padding: 0 24%;
   }
 }
 
@@ -103,7 +130,8 @@ body {
   display: grid;
   grid-template-columns: repeat(1, 100%);
   grid-template-rows: repeat(4, 230px);
-  grid-gap: 25px;
+  grid-gap: 30px;
+  justify-content: center;
   margin-bottom: 60px;
 }
 @media screen and (min-width: 768px) {
@@ -114,21 +142,21 @@ body {
 }
 @media screen and (min-width: 992px) {
   .feature-list {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(4, 115px);
+    grid-template-columns: repeat(3, 350px);
+    grid-template-rows: repeat(4, 122.5px);
     grid-template-areas: ". two ." "one two four" "one three four" ". three .";
   }
 }
 .feature-list .feature {
   background-color: white;
-  box-shadow: 0 8px 16px rgba(84, 158, 242, 0.15);
   border-radius: 4px;
+  box-shadow: 0 8px 16px rgba(84, 158, 242, 0.15);
   padding: 24px;
   position: relative;
 }
 @media screen and (min-width: 992px) {
   .feature-list .feature {
-    padding: 30px;
+    padding: 35px;
   }
 }
 .feature-list .feature:nth-child(1) {
@@ -164,24 +192,16 @@ body {
   }
 }
 .feature-list h2 {
-  color: #4c4e61;
-  font-weight: 600;
-  font-size: 1.2em;
   margin-bottom: 12px;
-}
-.feature-list p {
-  font-size: 0.88em;
-  line-height: 1.6;
 }
 .feature-list img {
   position: absolute;
-  bottom: 24px;
-  right: 24px;
+  bottom: 35px;
+  right: 35px;
 }
 
 footer {
-  font-size: 0.7em;
   text-align: center;
 }
 
-/*# sourceMappingURL=styles.css.map */
+/*# sourceMappingURL=index.css.map */
