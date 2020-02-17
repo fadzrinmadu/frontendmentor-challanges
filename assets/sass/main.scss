@@ -1,0 +1,25 @@
+// This is the single file output by sass. It is intended to ONLY @import other files
+
+// 1 - ABSTRACTS
+@import 'abstracts/_variables.scss';
+@import 'abstracts/_mixins.scss';
+
+// 2 - BASE
+@import 'base/_reset.scss';
+@import 'base/_base.scss';
+@import 'base/_typography.scss';
+
+// 3 - COMPONENTS
+@import 'components/_buttons.scss';
+@import 'components/_links.scss';
+@import 'components/_navTabs.scss';
+@import 'components/_socialMedia.scss';
+@import 'components/_attribution.scss';
+
+// 4 - LAYOUT
+@import 'layout/_header.scss';
+@import 'layout/_twoColumn.scss';
+@import 'layout/_footer.scss';
+
+// 5 - PAGES
+@import 'pages/_home.scss';

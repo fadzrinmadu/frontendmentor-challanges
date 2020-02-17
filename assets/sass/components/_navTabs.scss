@@ -1,0 +1,48 @@
+.nav-tabs {
+  margin: 40px auto;
+  @include mQ($lg) {
+    display: flex;
+    justify-content: center;
+    margin: 60px auto;
+  }
+  li {
+    padding: 20px;
+    border-top: 1px solid #dde0e7;
+    position: relative;
+    color: $grayishBlue;
+    cursor: pointer;
+    @include mQ($lg) {
+      border: none;
+      border-bottom: 1px solid #dde0e7;
+      padding: 30px 40px;
+    }
+    &:hover {
+      color: $softRed;
+    }
+    &:last-child {
+      border-bottom: 1px solid #dde0e7;
+    }
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 0;
+      height: 4px;
+      background: $softRed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      transition: width .3s;
+    }
+  }
+  li.active {
+    color: $veryDarkBlue;
+    &::after {
+      width: 44%;
+      @include mQ($lg) {
+        width: 100%;
+      }
+    }
+  }
+}

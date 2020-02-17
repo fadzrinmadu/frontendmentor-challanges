@@ -1,0 +1,9 @@
+.two-column {
+  @include mQ($lg) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 9.641vw;
+    align-items: center;
+    text-align: left;
+  }
+}

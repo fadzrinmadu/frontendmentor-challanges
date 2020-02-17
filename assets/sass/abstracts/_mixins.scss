@@ -1,0 +1,34 @@
+@mixin mQ($point) {
+  @media screen and (min-width: $point) {
+    @content;
+  }
+}
+
+@mixin backgroundTemplate {
+  content: '';
+  display: block;
+  position: absolute;
+  background: $softBlue;
+  width: 95%;
+  height: 90%;
+  border-radius: 53.333vw 0 0 53.333vw;
+  top: 12vw;
+  right: -9.067vw;
+  z-index: -9999;
+  @include mQ($lg) {
+    height: 98%;
+    top: 9vw;
+  }
+}
+
+@mixin buttonColor($color1, $color2) {
+  background: $color1;
+  color: $color2;
+  &:hover {
+    @include mQ($lg) {
+      color: $color1;
+      background: $color2;
+      border: 2px solid;
+    }
+  }
+}

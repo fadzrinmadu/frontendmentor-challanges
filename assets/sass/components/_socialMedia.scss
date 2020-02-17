@@ -1,0 +1,17 @@
+.social-media {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin-top: 30px;
+  @include mQ($lg) {
+    justify-content: flex-end;
+  }
+  li {
+    &:hover svg path {
+      fill: $softRed;
+    }
+    &:first-child {
+      margin-right: 30px;
+    }
+  }
+}
