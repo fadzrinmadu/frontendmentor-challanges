@@ -1,0 +1,12 @@
+button,
+.button {
+  display: block;
+  background: $cyan;
+  min-width: 100px;
+  min-height: 38px;
+  line-height: 38px;
+  border: none;
+  border-radius: 40px;
+  box-sizing: border-box;
+  outline: none;
+}

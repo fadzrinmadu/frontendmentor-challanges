@@ -1,0 +1,31 @@
+.intro {
+  overflow: hidden;
+  padding-bottom: 168px;
+  .illustration {
+    width: 133.333vw;
+  }
+  .content {
+    margin-top: 50px;
+  }
+  .button {
+    width: 200px;
+    height: 55px;
+    line-height: 55px;
+    margin: auto;
+  }
+}
+
+section.features {
+  background: #f0f1f6;
+  padding-top: 172px;
+  padding-bottom: 80px;
+  .feature-list {
+    margin-top: 96px;
+  }
+  .feature-list .card:first-child::after {
+    @include lineCard;
+  }
+  .feature-list .card:nth-child(2)::after {
+    @include lineCard;
+  }
+}

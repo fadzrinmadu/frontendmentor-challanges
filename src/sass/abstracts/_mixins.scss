@@ -1,0 +1,17 @@
+@mixin mQ($point) {
+  @media screen and (min-width: $point) {
+    @content;
+  }
+}
+
+@mixin lineCard {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 8px;
+  height: 48px;
+  background: $cyan;
+  right: 0;
+  left: 0;
+  margin: auto;
+}

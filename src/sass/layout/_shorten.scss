@@ -1,0 +1,24 @@
+.shorten {
+  position: absolute;
+  right: 24px;
+  left: 24px;
+  background: $darkViolet url('../img/bg-shorten-mobile.svg') no-repeat;
+  background-position: right top;
+  border-radius: 8px;
+  transform: translateY(-50%);
+  form {
+    padding: 24px;
+  }
+  input, 
+  button {
+    height: 50px;
+    border-radius: 4px;
+  }
+  input {
+    margin-bottom: 16px;
+  }
+  .button {
+    width: 100%;
+    line-height: 50px;
+  }
+}

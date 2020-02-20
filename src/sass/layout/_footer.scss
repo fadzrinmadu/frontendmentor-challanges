@@ -1,0 +1,21 @@
+footer.container {
+  background: $veryDarkViolet;
+  padding-top: 54px;
+  padding-bottom: 54px;
+  .logo {
+    filter: grayscale(1) brightness(0) invert(1);
+  }
+}
+
+.info {
+  margin-top: 40px;
+  div {
+    margin-bottom: 30px !important;
+  }
+  h4 {
+    margin-bottom: 28px;
+  }
+  li {
+    padding: 10px 0;
+  }
+}

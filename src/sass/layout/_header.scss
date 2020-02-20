@@ -1,0 +1,41 @@
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  position: relative;
+  margin: 40px auto 30px;
+  a {
+    align-self: center;
+  }
+}
+
+.menu-container {
+  width: 0;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform .3s ease;
+  overflow: hidden;
+  position: absolute;
+}
+
+.menu-container.active {
+  top: 60px;
+  width: 100%;
+  transform: scaleY(1);
+  background: $darkViolet;
+  border-radius: 8px;
+  box-sizing: border-box;
+  .nav-list {
+    margin: 40px 24px;
+  }
+  ul:first-child {
+    border-bottom: 1px solid #544a6d;
+  }
+  li {
+    margin: 36px auto;
+  }
+  .button {
+    height: 48px;
+    line-height: 48px;
+  }
+}
