@@ -239,21 +239,21 @@ header nav a {
 }
 
 .menu-container {
-  width: 0;
+  background: #3b3054;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 8px;
+  box-sizing: border-box;
   transform: scaleY(0);
   transform-origin: top;
-  transition: transform 0.3s ease;
-  overflow: hidden;
+  transition: 0.3s ease;
   position: absolute;
+  top: 60px;
+  z-index: 1;
 }
 
 .menu-container.active {
-  top: 60px;
-  width: 100%;
   transform: scaleY(1);
-  background: #3b3054;
-  border-radius: 8px;
-  box-sizing: border-box;
 }
 .menu-container.active .nav-list {
   margin: 40px 24px;

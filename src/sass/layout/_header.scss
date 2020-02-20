@@ -10,21 +10,21 @@ header nav {
 }
 
 .menu-container {
-  width: 0;
+  background: $darkViolet;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 8px;
+  box-sizing: border-box;
   transform: scaleY(0);
   transform-origin: top;
-  transition: transform .3s ease;
-  overflow: hidden;
+  transition: .3s ease;
   position: absolute;
+  top: 60px;
+  z-index: 1;
 }
 
 .menu-container.active {
-  top: 60px;
-  width: 100%;
   transform: scaleY(1);
-  background: $darkViolet;
-  border-radius: 8px;
-  box-sizing: border-box;
   .nav-list {
     margin: 40px 24px;
   }
