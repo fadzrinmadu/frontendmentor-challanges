@@ -126,24 +126,9 @@ p,
   font-size: 0.9em;
 }
 
-a,
-.button {
+a {
   color: white;
   text-decoration: none;
-}
-
-button,
-.button {
-  font-size: 1em;
-  font-weight: 700;
-  text-align: center;
-}
-
-input,
-input::-webkit-input-placeholder {
-  color: #9e9aa7;
-  font-family: inherit;
-  font-size: 1em;
 }
 
 .menu-toggle i {
@@ -179,6 +164,11 @@ input::-webkit-input-placeholder {
 
 button,
 .button {
+  color: white;
+  font-size: 1em;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
   display: block;
   background: #2acfcf;
   min-width: 100px;
@@ -188,14 +178,44 @@ button,
   border-radius: 40px;
   box-sizing: border-box;
   outline: none;
+  cursor: pointer;
 }
 
-.card {
+.shorten-results .card {
+  background: white;
+  margin-top: 20px;
+}
+.shorten-results .card .card-header,
+.shorten-results .card .card-body {
+  padding: 14px;
+}
+.shorten-results .card .card-header {
+  border-bottom: 1px solid #e5e5e5;
+}
+.shorten-results .card p {
+  margin: 0;
+  text-align: left;
+  font-size: 1rem;
+}
+.shorten-results .card .card-body p {
+  color: #2acfcf;
+  margin-bottom: 14px;
+}
+.shorten-results .card .button {
+  width: 100%;
+  border-radius: 8px;
+}
+.shorten-results .card .button.copied {
+  color: white;
+  background: #3b3054;
+}
+
+.feature-list .card {
   background: white;
   margin-bottom: 92px;
   position: relative;
 }
-.card .card-header {
+.feature-list .card .card-header {
   position: absolute;
   background: #3b3054;
   display: flex;
@@ -209,10 +229,10 @@ button,
   left: 0;
   right: 0;
 }
-.card .card-header img {
+.feature-list .card .card-header img {
   object-fit: contain;
 }
-.card .card-body {
+.feature-list .card .card-body {
   padding: 65px 36px 40px;
 }
 
@@ -225,6 +245,35 @@ button,
 .social-media a {
   display: inline-block;
   margin: auto 15px;
+}
+
+input {
+  color: #9e9aa7;
+  font-family: inherit;
+  font-size: 1em;
+  margin-bottom: 16px;
+}
+input::placeholder {
+  color: inherit;
+  font: inherit;
+}
+
+input.invalid {
+  color: #f46262;
+  border: 2px solid #f46262;
+  margin-bottom: 0;
+}
+input.invalid ~ .invalid-message {
+  color: #f46262;
+  font-size: 0.7em;
+  font-style: italic;
+  text-align: left;
+  display: block;
+  margin-top: 8px;
+  margin-bottom: 16px;
+}
+input.invalid::placeholder {
+  color: rgba(244, 98, 98, 0.8);
 }
 
 header nav {
@@ -285,9 +334,6 @@ header nav a {
 .shorten button {
   height: 50px;
   border-radius: 4px;
-}
-.shorten input {
-  margin-bottom: 16px;
 }
 .shorten .button {
   width: 100%;
@@ -356,9 +402,14 @@ footer.container .logo {
   margin: auto;
 }
 
+.shorten-results {
+  background: #f0f1f6;
+  padding-top: 100px;
+}
+
 section.features {
   background: #f0f1f6;
-  padding-top: 172px;
+  padding-top: 100px;
   padding-bottom: 80px;
 }
 section.features .feature-list {

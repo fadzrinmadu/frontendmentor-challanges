@@ -46,11 +46,13 @@
     </section>
 
     <div class="shorten">
-      <form>
-        <input type="text" placeholder="Shorten a link here...">
+      <form id="shorten-form">
+        <input type="text" placeholder="Shorten a link here..." id="shorten-input" autocomplete="off">
         <button class="button">Shorten It!</button>
       </form>
     </div>
+
+    <ul class="shorten-results container" id="shorten-results"></ul>
 
     <section class="features container">
       <h2>Advanced Statistics</h2>

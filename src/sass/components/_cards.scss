@@ -1,4 +1,33 @@
-.card {
+.shorten-results .card {
+  background: white;
+  margin-top: 20px;
+  .card-header,
+  .card-body {
+    padding: 14px;
+  }
+  .card-header {
+    border-bottom: 1px solid #e5e5e5;
+  }
+  p {
+    margin: 0;
+    text-align: left;
+    font-size: 1rem;
+  }
+  .card-body p {
+    color: $cyan;
+    margin-bottom: 14px;
+  }
+  .button {
+    width: 100%;
+    border-radius: 8px;
+  }
+  .button.copied {
+    color: white;
+    background: $darkViolet;
+  }
+}
+
+.feature-list .card {
   background: white;
   margin-bottom: 92px;
   position: relative;
