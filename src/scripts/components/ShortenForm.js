@@ -16,14 +16,14 @@ export default class ShortenForm {
       // check if the url is valid
       let message = ''
       if (shortenInput.value !== '') {
-        if (this.validURL(shortenInput.value)) {
-          const shortenResult = await this.shortenURL('https://rel.ink/api/links/', { 
-            url: shortenInput.value 
-          })
+        let apiURL = 'https://rel.ink/api/links/'
+        let post = { url: shortenInput.value }
+        const shortenResult = await this.shortenURL(apiURL, post)
+        if (!(shortenResult.hashid == undefined)) {
           this.saveURL(shortenResult)
           this.showShortenResults()
         } else {
-          message = 'Your url is invalid'
+          message = shortenResult.url
         }
       } else {
         message = 'Please add a link'
@@ -90,11 +90,6 @@ export default class ShortenForm {
     .then(response => response)
   }
 
-  validURL(url) {
-    let pattern = /^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\(\)\*\+,;=.]+$/
-    return pattern.test(url);
-  }
-
   createInvalidMessage(message) {
     let span = document.createElement('span')
     let spanText = document.createTextNode(message)
@@ -102,4 +97,9 @@ export default class ShortenForm {
     span.classList.add('invalid-message')
     return span;
   }
+
+  // validURL(url) {
+  //   let pattern = /^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\(\)\*\+,;=.]+$/
+  //   return pattern.test(url);
+  // }
 }
