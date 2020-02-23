@@ -6,12 +6,11 @@
 
 @mixin lineCard {
   content: '';
+  background: $cyan;
   position: absolute;
   display: block;
+  top: 0;
+  left: 50%;
   width: 8px;
-  height: 48px;
-  background: $cyan;
-  right: 0;
-  left: 0;
-  margin: auto;
+  height: 100%;
 }

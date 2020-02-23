@@ -15,4 +15,10 @@ button,
   box-sizing: border-box;
   outline: none;
   cursor: pointer;
+  @include mQ($lg) {
+    transition: .3s;
+    &:hover {
+      background: hsl(180, 96%, 49%);
+    }
+  }
 }

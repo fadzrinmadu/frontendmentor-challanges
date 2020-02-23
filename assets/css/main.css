@@ -57,6 +57,15 @@ table {
   padding: 0 6.933vw;
 }
 
+@media screen and (min-width: 992px) {
+  .grid {
+    display: grid;
+    grid-template-columns: 46% 44%;
+    align-items: center;
+    text-align: left;
+  }
+}
+
 .illustration {
   width: 100%;
 }
@@ -97,9 +106,19 @@ h3 {
 h1 {
   font-size: 2.2em;
 }
+@media screen and (min-width: 992px) {
+  h1 {
+    font-size: 4em;
+  }
+}
 
 h2 {
   font-size: 1.5em;
+}
+@media screen and (min-width: 992px) {
+  h2 {
+    font-size: 2.4em;
+  }
 }
 
 h3 {
@@ -121,9 +140,21 @@ p,
   font-size: 1em;
 }
 
+@media screen and (min-width: 992px) {
+  .features .leading {
+    padding: 0 24%;
+  }
+}
+
 p,
 .leading {
   font-size: 0.9em;
+}
+@media screen and (min-width: 992px) {
+  p,
+.leading {
+    font-size: 1em;
+  }
 }
 
 a {
@@ -137,12 +168,22 @@ a {
 }
 
 .menu-container li {
-  text-align: center;
   font-weight: 700;
+  text-align: center;
+}
+@media screen and (min-width: 992px) {
+  .menu-container li a {
+    color: #9e9aa7;
+  }
 }
 
 .card-body {
   font-size: 0.9em;
+}
+@media screen and (min-width: 992px) {
+  .card-body {
+    font-size: 0.8em;
+  }
 }
 
 .info li a {
@@ -180,40 +221,28 @@ button,
   outline: none;
   cursor: pointer;
 }
-
-.shorten-results .card {
-  background: white;
-  margin-top: 20px;
-}
-.shorten-results .card .card-header,
-.shorten-results .card .card-body {
-  padding: 14px;
-}
-.shorten-results .card .card-header {
-  border-bottom: 1px solid #e5e5e5;
-}
-.shorten-results .card p {
-  margin: 0;
-  text-align: left;
-  font-size: 1rem;
-}
-.shorten-results .card .card-body p {
-  color: #2acfcf;
-  margin-bottom: 14px;
-}
-.shorten-results .card .button {
-  width: 100%;
-  border-radius: 8px;
-}
-.shorten-results .card .button.copied {
-  color: white;
-  background: #3b3054;
+@media screen and (min-width: 992px) {
+  button,
+.button {
+    transition: 0.3s;
+  }
+  button:hover,
+.button:hover {
+    background: #05f5f5;
+  }
 }
 
 .feature-list .card {
   background: white;
   margin-bottom: 92px;
   position: relative;
+  z-index: 1;
+}
+@media screen and (min-width: 992px) {
+  .feature-list .card {
+    margin: 20px;
+    height: 40%;
+  }
 }
 .feature-list .card .card-header {
   position: absolute;
@@ -229,11 +258,22 @@ button,
   left: 0;
   right: 0;
 }
+@media screen and (min-width: 992px) {
+  .feature-list .card .card-header {
+    margin-left: 40px;
+  }
+}
 .feature-list .card .card-header img {
   object-fit: contain;
 }
 .feature-list .card .card-body {
   padding: 65px 36px 40px;
+}
+@media screen and (min-width: 992px) {
+  .feature-list .card .card-body {
+    padding-top: 90px;
+    padding-bottom: 20px;
+  }
 }
 
 .social-media {
@@ -242,9 +282,19 @@ button,
   justify-content: center;
   margin-top: 50px;
 }
+@media screen and (min-width: 992px) {
+  .social-media {
+    margin: 0;
+  }
+}
 .social-media a {
   display: inline-block;
   margin: auto 15px;
+}
+@media screen and (min-width: 992px) {
+  .social-media a {
+    margin-top: 0;
+  }
 }
 
 input {
@@ -272,6 +322,13 @@ input.invalid ~ .invalid-message {
   margin-top: 8px;
   margin-bottom: 16px;
 }
+@media screen and (min-width: 992px) {
+  input.invalid ~ .invalid-message {
+    position: absolute;
+    bottom: 20px;
+    font-size: 0.8em;
+  }
+}
 input.invalid::placeholder {
   color: rgba(244, 98, 98, 0.8);
 }
@@ -283,8 +340,19 @@ header nav {
   position: relative;
   margin: 40px auto 30px;
 }
+@media screen and (min-width: 992px) {
+  header nav {
+    margin-top: 50px;
+  }
+}
 header nav a {
   align-self: center;
+}
+
+@media screen and (min-width: 992px) {
+  .menu-toggle {
+    display: none;
+  }
 }
 
 .menu-container {
@@ -318,26 +386,166 @@ header nav a {
   line-height: 48px;
 }
 
+@media screen and (min-width: 992px) {
+  .menu-container,
+.menu-container.active {
+    background: white;
+    transform: scaleY(1);
+    border-radius: none;
+    position: initial;
+  }
+}
+@media screen and (min-width: 992px) {
+  .menu-container .nav-list,
+.menu-container.active .nav-list {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 45px;
+  }
+  .menu-container .nav-list li:hover a,
+.menu-container.active .nav-list li:hover a {
+    color: #35323e;
+  }
+  .menu-container .nav-list li:hover .button,
+.menu-container.active .nav-list li:hover .button {
+    color: white;
+  }
+}
+@media screen and (min-width: 992px) {
+  .menu-container ul,
+.menu-container.active ul {
+    display: flex;
+  }
+}
+@media screen and (min-width: 992px) {
+  .menu-container li,
+.menu-container.active li {
+    align-self: center;
+    margin-right: 37px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .menu-container .button,
+.menu-container.active .button {
+    color: white;
+    width: 103px;
+    height: 40px;
+    line-height: 40px;
+  }
+}
+
 .shorten {
   position: absolute;
-  right: 24px;
-  left: 24px;
+  right: 6.933vw;
+  left: 6.933vw;
   background: #3b3054 url("../img/bg-shorten-mobile.svg") no-repeat;
   background-position: right top;
   border-radius: 8px;
   transform: translateY(-50%);
 }
+@media screen and (min-width: 768px) {
+  .shorten {
+    padding: 30px;
+    background-image: url("../img/bg-shorten-desktop.svg");
+    background-size: cover;
+  }
+}
 .shorten form {
   padding: 24px;
+  position: relative;
+}
+@media screen and (min-width: 992px) {
+  .shorten form {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 .shorten input,
 .shorten button {
   height: 50px;
-  border-radius: 4px;
+  border-radius: 8px;
+}
+@media screen and (min-width: 992px) {
+  .shorten input,
+.shorten button {
+    height: 64px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .shorten input {
+    width: 80%;
+    margin-bottom: 0;
+  }
 }
 .shorten .button {
   width: 100%;
   line-height: 50px;
+}
+@media screen and (min-width: 992px) {
+  .shorten .button {
+    width: 18%;
+  }
+}
+
+.shorten-results .card {
+  background: white;
+  margin-top: 20px;
+  border-radius: 8px;
+}
+@media screen and (min-width: 992px) {
+  .shorten-results .card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+  }
+}
+.shorten-results .card .card-header,
+.shorten-results .card .card-body {
+  padding: 14px;
+}
+.shorten-results .card .card-header {
+  border-bottom: 1px solid #e5e5e5;
+}
+@media screen and (min-width: 992px) {
+  .shorten-results .card .card-header {
+    border-bottom: none;
+  }
+}
+.shorten-results .card p {
+  margin: 0;
+  text-align: left;
+  font-size: 1rem;
+}
+@media screen and (min-width: 992px) {
+  .shorten-results .card p {
+    font-size: 1.1rem;
+    color: #35323e;
+  }
+}
+@media screen and (min-width: 992px) {
+  .shorten-results .card .card-body {
+    display: flex;
+    align-items: center;
+  }
+}
+.shorten-results .card .card-body p {
+  color: #2acfcf;
+  margin-bottom: 14px;
+}
+@media screen and (min-width: 992px) {
+  .shorten-results .card .card-body p {
+    margin-bottom: 0;
+    margin-right: 20px;
+  }
+}
+.shorten-results .card .button {
+  width: 100%;
+  border-radius: 8px;
+}
+.shorten-results .card .button.copied {
+  color: white;
+  background: #3b3054;
 }
 
 .started {
@@ -345,9 +553,22 @@ header nav a {
   padding-top: 110px;
   padding-bottom: 90px;
 }
+@media screen and (min-width: 768px) {
+  .started {
+    background-image: url("../img/bg-boost-desktop.svg");
+    background-size: cover;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
 .started h2 {
   color: white;
   margin-bottom: 20px;
+}
+@media screen and (min-width: 992px) {
+  .started h2 {
+    margin-bottom: 40px;
+  }
 }
 .started .button {
   width: 186px;
@@ -361,6 +582,15 @@ footer.container {
   padding-top: 54px;
   padding-bottom: 54px;
 }
+@media screen and (min-width: 992px) {
+  footer.container {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    text-align: left;
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+}
 footer.container .logo {
   filter: grayscale(1) brightness(0) invert(1);
 }
@@ -368,11 +598,31 @@ footer.container .logo {
 .info {
   margin-top: 40px;
 }
+@media screen and (min-width: 992px) {
+  .info {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 0;
+  }
+  .info a:hover, .info i:hover {
+    color: #2acfcf;
+  }
+}
 .info div {
-  margin-bottom: 30px !important;
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 992px) {
+  .info div {
+    margin-bottom: 0;
+  }
 }
 .info h4 {
   margin-bottom: 28px;
+}
+@media screen and (min-width: 992px) {
+  .info h4 {
+    margin-bottom: 20px;
+  }
 }
 .info li {
   padding: 10px 0;
@@ -389,17 +639,47 @@ footer.container .logo {
   overflow: hidden;
   padding-bottom: 168px;
 }
+@media screen and (min-width: 992px) {
+  .intro {
+    margin-top: 80px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .intro .content-image {
+    grid-column: 2/3;
+    grid-row: 1;
+  }
+}
 .intro .illustration {
   width: 133.333vw;
 }
+@media screen and (min-width: 992px) {
+  .intro .illustration {
+    width: initial;
+    transform: translateX(160px);
+  }
+}
 .intro .content {
   margin-top: 50px;
+}
+@media screen and (min-width: 992px) {
+  .intro .content {
+    width: auto;
+    grid-column: 1/2;
+    grid-row: 1;
+    margin-top: 0;
+  }
 }
 .intro .button {
   width: 200px;
   height: 55px;
   line-height: 55px;
   margin: auto;
+}
+@media screen and (min-width: 992px) {
+  .intro .button {
+    margin-left: 0;
+  }
 }
 
 .shorten-results {
@@ -414,28 +694,36 @@ section.features {
 }
 section.features .feature-list {
   margin-top: 96px;
+  position: relative;
 }
-section.features .feature-list .card:first-child::after {
+section.features .feature-list::after {
   content: "";
+  background: #2acfcf;
   position: absolute;
   display: block;
+  top: 0;
+  left: 50%;
   width: 8px;
-  height: 48px;
-  background: #2acfcf;
-  right: 0;
-  left: 0;
-  margin: auto;
+  height: 100%;
 }
-section.features .feature-list .card:nth-child(2)::after {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 8px;
-  height: 48px;
-  background: #2acfcf;
-  right: 0;
-  left: 0;
-  margin: auto;
+@media screen and (min-width: 992px) {
+  section.features .feature-list {
+    display: flex;
+    text-align: left;
+  }
+  section.features .feature-list::after {
+    transform: rotateZ(90deg);
+  }
+}
+@media screen and (min-width: 992px) {
+  section.features .feature-list .card:nth-child(2) {
+    margin-top: 80px;
+  }
+}
+@media screen and (min-width: 992px) {
+  section.features .feature-list .card:nth-child(3) {
+    margin-top: 160px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

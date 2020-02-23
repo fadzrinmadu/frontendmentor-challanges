@@ -21,6 +21,11 @@ input.invalid {
     display: block;
     margin-top: 8px;
     margin-bottom: 16px;
+    @include mQ($lg) {
+      position: absolute;
+      bottom: 20px;
+      font-size: .8em;
+    }
   }
   &::placeholder {
     color: hsla(0, 87%, 67%, 80%);

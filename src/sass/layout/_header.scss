@@ -4,8 +4,17 @@ header nav {
   align-content: center;
   position: relative;
   margin: 40px auto 30px;
+  @include mQ($lg) {
+    margin-top: 50px;
+  }
   a {
     align-self: center;
+  }
+}
+
+.menu-toggle {
+  @include mQ($lg) {
+    display: none;
   }
 }
 
@@ -37,5 +46,45 @@ header nav {
   .button {
     height: 48px;
     line-height: 48px;
+  }
+}
+
+.menu-container,
+.menu-container.active {
+  @include mQ($lg) {
+    background: white;
+    transform: scaleY(1);
+    border-radius: none;
+    position: initial;
+  }
+  .nav-list {
+    @include mQ($lg) {
+      display: flex;
+      justify-content: space-between;
+      margin-left: 45px;
+      li:hover {
+        a {color: $veryDarkBlue;}
+        .button {color: white;}
+      }
+    }
+  }
+  ul {
+    @include mQ($lg) {
+      display: flex;
+    }
+  }
+  li {
+    @include mQ($lg) {
+      align-self: center;
+      margin-right: 37px;
+    }
+  }
+  .button {
+    @include mQ($lg) {
+      color: white;
+      width: 103px;
+      height: 40px;
+      line-height: 40px;
+    }
   }
 }

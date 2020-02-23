@@ -15,10 +15,16 @@ h3 {
 
 h1 {
   font-size: 2.2em;
+  @include mQ($lg) {
+    font-size: 4em;
+  }
 }
 
 h2 {
   font-size: 1.5em;
+  @include mQ($lg) {
+    font-size: 2.4em;
+  }
 }
 
 h3 {
@@ -40,9 +46,18 @@ p,
   font-size: 1em;
 }
 
+.features .leading {
+  @include mQ($lg) {
+    padding: 0 24%;
+  }
+}
+
 p,
 .leading {
   font-size: 0.9em;
+  @include mQ($lg) {
+    font-size: 1em;
+  }
 }
 
 a {
@@ -56,12 +71,20 @@ a {
 }
 
 .menu-container li {
-  text-align: center;
   font-weight: 700;
+  text-align: center;
+  a {
+    @include mQ($lg) {
+      color: $grayishViolet;
+    }
+  }
 }
 
 .card-body {
   font-size: .90em;
+  @include mQ($lg) {
+    font-size: .8em;
+  }
 }
 
 .info li a {
