@@ -325,7 +325,7 @@ input.invalid ~ .invalid-message {
 @media screen and (min-width: 992px) {
   input.invalid ~ .invalid-message {
     position: absolute;
-    bottom: 20px;
+    bottom: -20px;
     font-size: 0.8em;
   }
 }
