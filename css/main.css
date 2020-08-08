@@ -1,3 +1,5 @@
+/* Primary */
+/* Neutral */
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -52,8 +54,6 @@ table {
   border-spacing: 0;
 }
 
-/* Primary */
-/* Neutral */
 body {
   color: white;
   font-family: "Karla", sans-serif;
@@ -70,47 +70,79 @@ h2 {
   margin: 50px auto;
   box-shadow: 0px 0px 8px rgba(152, 166, 189, 0.3);
 }
-
-.join, .subscription, .why-us {
-  padding: 30px 24px;
+@media screen and (min-width: 992px) {
+  .container {
+    display: grid;
+    width: 48%;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
-.join {
+.community,
+.subscription,
+.why-us {
+  padding: 30px 24px;
+}
+@media screen and (min-width: 992px) {
+  .community,
+.subscription,
+.why-us {
+    padding: 60px 40px;
+  }
+}
+
+.community {
   background: white;
   border-radius: 4px 4px 0 0;
 }
-.join h1 {
+@media screen and (min-width: 992px) {
+  .community {
+    grid-column: 1/3;
+    border-radius: 8px 8px 0 0;
+  }
+}
+.community__heading {
   color: #2ab2af;
   font-size: 20px;
   font-weight: 700;
 }
-.join h2 {
+@media screen and (min-width: 992px) {
+  .community__heading {
+    font-size: 22px;
+  }
+}
+.community__subtitle {
   color: #c0df34;
   margin: 24px auto;
 }
-.join p {
+.community__text {
   color: #98a6bd;
   font-size: 14px;
   line-height: 1.6;
+}
+@media screen and (min-width: 992px) {
+  .community__text {
+    font-size: 16px;
+  }
 }
 
 .subscription {
   background: #2ab2af;
 }
-.subscription .price {
+.subscription__price {
   margin: 24px 0 16px;
   color: #e5eff5;
 }
-.subscription .price span {
+.subscription__price--highlighted {
   color: white;
   font-size: 32px;
   margin-right: 10px;
 }
-.subscription p {
+.subscription__text {
   color: #e5eff5;
   margin-bottom: 30px;
 }
-.subscription button {
+.subscription__button {
   display: block;
   background: #c0df34;
   color: white;
@@ -123,7 +155,7 @@ h2 {
   border-radius: 4px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.16);
 }
-.subscription button:hover {
+.subscription__button:hover {
   cursor: pointer;
 }
 
@@ -131,16 +163,16 @@ h2 {
   background: #2dbebc;
   border-radius: 0 0 4px 4px;
 }
-.why-us h2 {
+.why-us__heading {
   margin-bottom: 24px;
 }
-.why-us li {
+.why-us__list-item {
   color: #e5eff5;
   font-size: 14px;
   margin-bottom: 6px;
 }
 
-footer {
+.footer {
   color: #2ab2af;
   font-size: 14px;
   text-align: center;
@@ -149,29 +181,8 @@ footer {
   padding: 0 80px;
 }
 
-/* MEDIA QUERIES */
-/* desktop */
-@media screen and (min-width: 992px) {
-  .container {
-    display: grid;
-    width: 48%;
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .join, .subscription, .why-us {
-    padding: 60px 40px;
-  }
-
-  .join {
-    grid-column: 1/3;
-    border-radius: 8px 8px 0 0;
-  }
-  .join h1 {
-    font-size: 22px;
-  }
-  .join p {
-    font-size: 16px;
-  }
+.attribution {
+  font-size: 12px;
 }
 
 /*# sourceMappingURL=main.css.map */
