@@ -53,19 +53,23 @@ table {
 }
 
 body {
-  color: white;
+  background-color: #ff7a7a;
+  background-image: url("../images/bg-intro-mobile.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
   font-family: "Poppins", sans-serif;
   font-size: 16px;
-  background: url("../images/bg-intro-mobile.png") no-repeat;
-  background-size: cover;
-  background-color: #ff7a7a;
+}
+@media screen and (min-width: 992px) {
+  body {
+    background-image: url("../images/bg-intro-desktop.png");
+  }
 }
 
-.container {
-  text-align: center;
-  width: 86%;
-  margin: auto;
-  padding-top: 70px;
+input,
+button {
+  outline: none;
 }
 
 h1 {
@@ -79,19 +83,57 @@ p {
   line-height: 1.5;
 }
 
-.trial {
+.container {
+  margin: auto;
+  padding-top: 70px;
+  text-align: center;
+  width: 86%;
+}
+@media screen and (min-width: 992px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-column-gap: 4%;
+    text-align: left;
+    width: 78%;
+    margin: auto;
+    padding-top: 54px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .content {
+    align-self: center;
+    justify-self: center;
+  }
+}
+@media screen and (min-width: 992px) {
+  .content__heading {
+    font-size: 46px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 58px auto 30px;
+    padding: 0;
+  }
+}
+@media screen and (min-width: 992px) {
+  .content__text {
+    padding-right: 40px;
+    line-height: 1.5;
+  }
+}
+
+.trial__panel {
   background: #6055a5;
   margin-top: 48px;
   padding: 20px 60px;
   border-radius: 8px;
   box-shadow: 0 8px rgba(62, 60, 73, 0.2);
 }
-
-span {
+.trial__text--hightlighted {
   font-weight: 700;
 }
-
-form {
+.trial__form {
   color: #3e3c49;
   background: white;
   margin-top: 26px;
@@ -99,7 +141,7 @@ form {
   border-radius: 8px;
   box-shadow: 0 8px rgba(62, 60, 73, 0.2);
 }
-form input {
+.trial__input {
   color: #3e3c49;
   display: block;
   width: 100%;
@@ -113,13 +155,31 @@ form input {
   text-transform: capitalize;
   font-weight: 600;
 }
-form input::placeholder {
-  color: #6d6a81;
-}
-form input:focus {
+.trial__input:focus {
   border: 1px solid rgba(62, 60, 73, 0.7);
 }
-form button {
+.trial__input::placeholder {
+  color: #6d6a81;
+}
+.trial__input--invalid {
+  color: #ff7a7a;
+  border: 2px solid #ff7a7a;
+  background: url("../images/icon-error.svg") no-repeat;
+  background-position: right 20px center;
+  padding-right: 50px;
+}
+.trial__input-message {
+  display: block;
+  color: #ff7a7a;
+  font-size: 12px;
+  font-weight: 200;
+  font-style: italic;
+  text-align: right;
+  margin-top: -18px;
+  margin-bottom: 14px;
+  padding: 5px;
+}
+.trial__button {
   display: block;
   width: 100%;
   padding: 20px;
@@ -133,90 +193,40 @@ form button {
   box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.16);
   transition: 0.3s;
 }
-form button:active {
+.trial__button:hover {
   background: #61d6a3;
-}
-form button:hover {
   cursor: pointer;
 }
-form p {
+.trial__button:active {
+  background: #61d6a3;
+}
+.trial__description {
+  display: block;
   color: #b9b6d3;
   margin-top: 10px;
   font-size: 11px;
   padding: 0 20px;
 }
-form p a {
+.trial__link {
   color: #ff7a7a;
   text-decoration: none;
   font-weight: 700;
 }
-form .invalid-message {
-  display: block;
-  color: #ff7a7a;
-  font-size: 12px;
-  font-weight: 200;
-  font-style: italic;
-  text-align: right;
-  margin-top: -18px;
-  margin-bottom: 14px;
-  padding: 5px;
-}
-form input.invalid {
-  color: #ff7a7a;
-  border: 2px solid #ff7a7a;
-  background: url("../images/icon-error.svg") no-repeat;
-  background-position: right 20px center;
-  padding-right: 50px;
-}
 
-input, button {
-  outline: none;
-}
-
-footer {
+.footer {
   margin-top: 64px;
   padding: 10px;
   font-size: 14px;
 }
-
-/* MEDIA QUERIES */
-/* desktop */
 @media screen and (min-width: 992px) {
-  body {
-    background: url("../images/bg-intro-desktop.png");
-    background-size: cover;
-    background-color: #ff7a7a;
-  }
-
-  .container {
-    display: grid;
-    grid-template-columns: repeat(2, auto);
-    grid-column-gap: 4%;
-    text-align: left;
-    width: 78%;
-    margin: auto;
-    padding-top: 54px;
-  }
-
-  .left-side {
-    align-self: center;
-    justify-self: center;
-  }
-  .left-side h1 {
-    font-size: 46px;
-    font-weight: 700;
-    line-height: 1.2;
-    margin: 58px auto 30px;
-    padding: 0;
-  }
-  .left-side p {
-    padding-right: 40px;
-  }
-
-  footer {
+  .footer {
     grid-column: 1/3;
     text-align: center;
   }
 }
 
-/*# sourceMappingURL=styles.css.map */
+.attribution {
+  font-size: 12px;
+}
+
+/*# sourceMappingURL=main.css.map */

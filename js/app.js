@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     e.preventDefault();
 
     // delete error messages if present
-    let invalidMessages = form.querySelectorAll('.invalid-message');
+    let invalidMessages = form.querySelectorAll('.trial__input-message');
     if (invalidMessages) {
       // remove multiple element
       invalidMessages.forEach((e) => {
@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }
       if (errorMessage != '') {
         createErrorMessage(errorMessage, input);
-        input.classList.add('invalid');
+        input.classList.add('trial__input--invalid');
       }
     })
 
@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let span = document.createElement('span');
     let spanText = document.createTextNode(text);
     span.appendChild(spanText);
-    span.classList.add('invalid-message');
+    span.classList.add('trial__input-message');
     form.insertBefore(span, element.nextSibling);
   }
 
