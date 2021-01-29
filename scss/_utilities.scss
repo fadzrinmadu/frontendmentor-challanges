@@ -1,3 +1,25 @@
+// container
+.container {
+  width: 100%;
+  margin: auto;
+
+  @include breakpoint-up(small) {
+    max-width: 540px;
+  }
+
+  @include breakpoint-up(medium) {
+    max-width: 720px;
+  }
+
+  @include breakpoint-up(large) {
+    max-width: 960px;
+  }
+
+  @include breakpoint-up(extra-large) {
+    max-width: 1140px;
+  }
+}
+
 // flexbox
 .flex {
   display: flex;
@@ -17,13 +39,22 @@
 
 // visibility
 .hide-for-mobile {
-  @include breakpoint-down(medium) {
+  @include breakpoint-down(large) {
     display: none;
   }
 }
 
 .hide-for-desktop {
-  @include breakpoint-up(medium) {
+  @include breakpoint-up(large) {
     display: none;
   }
+}
+
+// animations
+.fade-in {
+  animation: fadeIn 300ms ease-in-out forwards;
+}
+
+.fade-out {
+  animation: fadeOut 300ms ease-in-out forwards;
 }
