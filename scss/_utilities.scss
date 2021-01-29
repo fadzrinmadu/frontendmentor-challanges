@@ -1,0 +1,29 @@
+// flexbox
+.flex {
+  display: flex;
+
+  &--jc-between {
+    justify-content: space-between;
+  }
+
+  &--jc-center {
+    justify-content: center;
+  }
+
+  &--ai-center {
+    align-items: center;
+  }
+}
+
+// visibility
+.hide-for-mobile {
+  @include breakpoint-down(medium) {
+    display: none;
+  }
+}
+
+.hide-for-desktop {
+  @include breakpoint-up(medium) {
+    display: none;
+  }
+}
