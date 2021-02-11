@@ -1,0 +1,325 @@
+@import 'reset';
+@import 'variables';
+
+body {
+  color: $veryDarkCyan;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+}
+
+h1, h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
+h2 { font-size: 20px; }
+
+.ilustration { width: 100%; }
+
+.wrapper {
+  background: url('../images/bg-hero-mobile.svg') no-repeat;
+  background-color: $veryPaleCyan;
+  background-size: cover;
+}
+
+a[role=button] {
+  text-align: center;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 40px;
+  box-shadow: 0 4px 8px hsl(192, 100%, 9%, 10%);
+}
+
+.btn-get {
+  display: block;
+  background: $pink;
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  width: 82%;
+  margin: 30px auto 58px;
+  padding: 12px 0;
+  border-radius: 40px;
+  box-shadow: 0 4px 4px hsla(208, 11%, 55%, 30%);
+}
+
+.container {
+  width: 88%;
+  margin: auto;
+  padding: 20px 0;
+  position: relative;
+  line-height: 1.5;
+  text-align: center;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  .logo {
+    width: 100px;
+    object-fit: contain;
+  }
+  a[role=button] {
+    background: white;
+    display: inline-block;
+    color: $veryDarkCyan;
+    font-size: 14px;
+    width: 80px;
+    padding: 10px 14px;
+  }
+}
+
+.community {
+  margin-top: 60px;
+  padding: 0 12px;
+  h1 {
+    margin-bottom: 24px;
+    font-size: 26px;
+  }
+}
+
+.grow, .conversations, .users, {
+  width: 100%;
+  margin: 40px auto;
+  padding: 40px 30px;
+  border-radius: 16px;
+  box-sizing: border-box;
+  box-shadow: 0 0 16px hsla(208, 11%, 55%, 20%);
+  h2 {
+    margin: 60px 0 16px;
+  }
+  p {
+    color: $grayishBlue;
+    font-size: 16px;
+  }
+}
+
+footer {
+  color: $veryPaleCyan;
+  background: $veryDarkCyan;
+  margin-top: 180px;
+  .container {
+    text-align: left;
+  }
+  .started {
+    background: white;
+    color: $veryDarkCyan;
+    font-weight: 600;
+    text-align: center;
+    border-radius: 16px;
+    box-shadow: 0 0 16px hsla(208, 11%, 55%, 20%);
+    padding: 34px 0;
+    position: absolute;
+    top: -120px;
+    right: -10px;
+    left: -10px;
+    h2 {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+    .btn-get {
+      margin: 0 auto;
+      width: 60%;
+      font-size: 12px;
+    }
+  }
+  .logo {
+    margin-top: 140px;
+    filter: grayscale(1) brightness(0) invert(1);
+    width: 180px;
+  }
+  .info {
+    display: flex;
+    margin-top: 20px;
+    align-items: baseline;
+    img {
+      margin-top: 4px;
+      margin-right: 20px;
+      align-self: flex-start;
+    }
+    p {
+      line-height: 1.6;
+      font-weight: 200;
+    }
+  }
+  .nav-link {
+    margin-top: 60px;
+    li {
+      margin-top: 20px;
+    }
+    a {
+      color: $veryPaleCyan;
+      text-decoration: none;
+    }
+  }
+  .social-media {
+    margin: 60px auto 30px;
+    text-align: center;
+    a {
+      color: $veryPaleCyan;
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+      border: 1px solid $veryPaleCyan;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+  }
+  .copy, .attribution {
+    font-size: 14px;
+    text-align: center;
+    line-height: 1.6;
+    a {
+      color: white;
+    }
+  }
+  .attribution { font-size: 12px; }
+}
+
+
+/* MEDIA QUERIES */
+
+/* desktop */
+@media screen and (min-width: 992px) {
+  body {
+    font-size: 18px;
+  }
+
+  .wrapper {
+    background: url('../images/bg-hero-desktop.svg') no-repeat;
+    background-color: $veryPaleCyan;
+    background-size: cover;
+  }
+
+  .container {
+    text-align: left;
+  }
+
+  header {
+    margin-top: 30px;
+    .logo {
+      width: 160px;
+    }
+    a[role="button"] {
+      width: 130px;
+    }
+  }
+
+  .community {
+    display: grid;
+    grid-template-columns: 43% auto;
+    grid-column-gap: 6%;
+    padding-bottom: 48px;
+    .content {
+      padding-left: 0;
+      align-self: center;
+    }
+    h1 {
+      font-size: 36px;
+      margin-top: 1vw;
+    }
+    .btn-get {
+      margin: 30px 0;
+      width: 50%;
+    }
+  }
+
+  .grow, .conversations, .users {
+    display: grid;
+    grid-template-columns: repeat(2, 45%);
+    justify-content: space-between;
+    min-height: 400px;
+    padding-left: 8%;
+    P { font-size: 18px; }
+    img { width: 90%; }
+    .content, img {
+      align-self: center;
+    }
+  }
+
+  .grow, .users {
+    .content {
+      grid-column: 1/2;
+      grid-row: 1;
+    }
+  }
+
+  .grow {
+    margin-top: 120px;
+  }
+
+  .content {
+    h2 {
+      font-size: 26px;
+      margin-top: 0;
+    }
+  }
+  
+  footer {
+    .container {
+      display: grid;
+      grid-template-columns: repeat(3, 28%);
+      justify-content: space-between;
+      padding-top: 200px;
+      font-size: 14px;
+    }
+
+    .logo,
+    .nav-link, 
+    .nav-link p, 
+    .social-media,  {
+      margin: 0;
+    }
+
+    .started {
+      padding: 40px 2%;
+      right: 24%;
+      left: 24%;
+      h2 {
+        font-size: 28px;
+      }
+      .btn-get {
+        padding: 16px 2%;
+        font-size: 16px;
+        width: 300px;
+        box-sizing: border-box;
+        box-shadow: 0 4px 12px hsla(208, 11%, 55%, 50%);
+      }
+    }
+
+    .contact {
+      .logo {
+        margin-bottom: 10px;
+      }
+    }
+
+    .nav-link {
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+      grid-column-gap: 30%;
+      justify-content: end;
+      align-content: center;
+      margin-top: 30px;
+      margin-left: 10%;
+      li {
+        margin-bottom: 20px;
+      }
+    }
+
+    .social-media {
+      align-self: center;
+      margin-top: -60px;
+    }
+    
+    .copy {
+      margin-top: 80px;
+    }
+
+    .copy, .attribution {
+      grid-column: 1 / span 4;
+      text-align: right;
+    }
+  }
+}
