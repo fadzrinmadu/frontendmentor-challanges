@@ -1,0 +1,55 @@
+.testimonials {
+  h4 {
+    margin: 20px auto;
+  }
+}
+
+.slider {
+  width: 92%;
+  margin: 60px auto 0;
+}
+
+.wrapper {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+
+.slides {
+  display: flex;
+  width: 400%;
+}
+
+.slides.shifting {
+  transition: left;
+}
+
+.testimonial {
+  padding: 20px;
+  background: $veryLightGray;
+  box-sizing: border-box;
+  img {
+    width: 72px;
+    height: 72px;
+  }
+}
+
+.control-slider {
+  display: none;
+}
+
+.toggle-slider {
+  a {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    border: 2px solid $brightRed;
+    margin: 30px 2px 40px;
+  }
+  a.active {
+    background: $brightRed;
+  }
+}

@@ -1,0 +1,239 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css?family=Be+Vietnam:400,500,700&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  background: white;
+  color: #9095a7;
+  font-family: "Be Vietnam", sans-serif;
+  font-size: 16px;
+  text-align: center;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: #242d52;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 2.375em;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 2em;
+  line-height: 1.4;
+}
+
+p {
+  margin: 20px auto;
+  line-height: 1.6;
+}
+
+a {
+  color: #1d1e25;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.button {
+  color: #ffefeb;
+  font-size: 0.875em;
+  font-weight: 700;
+}
+
+.container {
+  padding-left: 6.933vw;
+  padding-right: 6.933vw;
+}
+
+.logo > img {
+  width: 108px;
+}
+
+main > section {
+  margin-bottom: 100px;
+}
+
+.illustration {
+  width: 100%;
+}
+
+.button {
+  background: #f25f3a;
+  display: block;
+  width: 130px;
+  height: 45px;
+  margin: auto;
+  line-height: 45px;
+  box-sizing: border-box;
+  border-radius: 40px;
+  box-shadow: 0 6px 8px rgba(242, 95, 58, 0.38);
+}
+
+header {
+  background: transparent;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  position: relative;
+}
+header nav {
+  position: absolute;
+  height: 0;
+  overflow: hidden;
+  top: 80px;
+  left: 6.933vw;
+  right: 6.933vw;
+  background: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  transition: height 0.5s;
+}
+header nav.active {
+  height: 290px;
+}
+header li {
+  text-align: center;
+  margin: 36px auto;
+}
+header .button {
+  display: none;
+}
+
+.feature-list {
+  text-align: left;
+  margin-top: 60px;
+  padding-left: 15px;
+}
+.feature-list h3 {
+  border-radius: 40px 0 0 40px;
+  background: #ffefeb;
+}
+.feature-list span {
+  display: inline-block;
+  width: 65px;
+  height: 40px;
+  line-height: 40px;
+  background: #f25f3a;
+  color: #fafafa;
+  border-radius: 40px;
+  text-align: center;
+  margin-right: 14px;
+}
+
+.testimonials h4 {
+  margin: 20px auto;
+}
+
+.slider {
+  width: 92%;
+  margin: 60px auto 0;
+}
+
+.wrapper {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+
+.slides {
+  display: flex;
+  width: 400%;
+}
+
+.slides.shifting {
+  transition: left;
+}
+
+.testimonial {
+  padding: 20px;
+  background: #fafafa;
+  box-sizing: border-box;
+}
+.testimonial img {
+  width: 72px;
+  height: 72px;
+}
+
+.control-slider {
+  display: none;
+}
+
+.toggle-slider a {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  border: 2px solid #f25f3a;
+  margin: 30px 2px 40px;
+}
+.toggle-slider a.active {
+  background: #f25f3a;
+}
+
+.started {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background: #f25f3a;
+}
+
+/*# sourceMappingURL=main.css.map */

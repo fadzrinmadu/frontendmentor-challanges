@@ -1,0 +1,31 @@
+header {
+  background: transparent;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  position: relative;
+  nav {
+    position: absolute;
+    height: 0;
+    overflow: hidden;
+    top: 80px;
+    left: $containerPadding;
+    right: $containerPadding;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .1);
+    box-sizing: border-box;
+    transition: height .5s;
+  }
+  nav.active {
+    height: 290px;
+  }
+  li {
+    text-align: center;
+    margin: 36px auto;
+  }
+  .button {
+    display: none;
+  }
+}
