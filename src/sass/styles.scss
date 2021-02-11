@@ -1,0 +1,331 @@
+@import 'reset';
+@import 'mixins';
+@import 'variables';
+@import 'defaults';
+
+header {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  @include mQ($large) {
+    margin-top: 50px;
+  }
+  .logo {
+    width: 120px;
+    object-fit: contain;
+    @include mQ($large) {
+      width: 180px;
+    }
+  }
+  .btn {
+    color: $pink;
+    width: 100px;
+    padding: 5px 0;
+    font-size: 14px;
+    border: 1px solid $pink;
+    box-shadow: 0 0 4px 4px hsla(322, 100%, 66%, 5%);
+    @include mQ($large) {
+      padding: 8px 0;
+      width: 110px;
+    }
+  }
+}
+
+main {
+  text-align: center;
+  @include mQ($large) {
+    margin-top: 160px;
+  }
+}
+
+.intro {
+  p {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    @include mQ($large) {
+      padding: 0 28%;
+    }
+  }
+}
+
+.activity {
+  text-align: left;
+  @include mQ($small) {
+    display: flex;
+  }
+  .icon {
+    width: 25px;
+    @include mQ($small) {
+      width: 36px;
+    }
+  }
+  .community, .message {
+    width: 150px;
+    margin: auto;
+    @include mQ($small) {
+      width: auto;
+    }
+  }
+  .community {
+    margin-bottom: 80px;
+    @include mQ($small) {
+      margin-bottom: 0;
+    }
+  }
+  h3, p { text-align: center; }
+}
+
+.grow {
+  margin-top: 280px;
+  padding-top: 80px;
+  padding-bottom: 60px;
+  background-color: #F6FBFF;
+  position: relative;
+  @include mQ($large) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 8%;
+    text-align: left;
+  }
+  .illustration {
+    @include mQ($large) {
+      grid-column: 2/3;
+      width: 100%;
+    }
+  }
+  .content {
+    @include mQ($large) {
+      grid-column: 1/2;
+      grid-row: 1;
+      padding-top: 90px;
+    }
+  }
+  &::before {
+    background: url('../images/bg-section-top-mobile-1.svg') no-repeat;
+    @include backgroundElement;
+    height: 112px;
+    top: -112px;
+    @include mQ($small) {
+      background-image: url('../images/bg-section-top-desktop-1.svg');
+      height: 165px;
+      top: -165px;
+    }
+  }
+  &::after {
+    background: url('../images/bg-section-bottom-mobile-1.svg') no-repeat;
+    @include backgroundElement;
+    height: 52px;
+    bottom: -52px;
+    @include mQ($small) {
+      background-image: url('../images/bg-section-bottom-desktop-1.svg');
+      height: 139px;
+      bottom: -139px;
+    }
+  }
+}
+
+.conversation {
+  margin-top: 160px;
+  @include mQ($large) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 8%;
+    text-align: left;
+    margin-top: 300px;
+  }
+  .illustration {
+    @include mQ($large) {
+      width: 100%;
+    }
+  }
+}
+
+.user {
+  margin-top: 180px;
+  padding-bottom: 100px;
+  position: relative;
+  background-color: #F6FBFF;
+  @include mQ($large) {
+    margin-top: 300px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 8%;
+    text-align: left;
+  }
+  .illustration {
+    width: 100%;
+  }
+  .content {
+    @include mQ($large) {
+      grid-column: 1/2;
+      grid-row: 1;
+      padding-top: 90px;
+    }
+  }
+  &::before {
+    background: url('../images/bg-section-top-mobile-2.svg') no-repeat;
+    @include backgroundElement;
+    height: 103px;
+    top: -103px;
+    @include mQ($small) {
+      background-image: url('../images/bg-section-top-desktop-2.svg');
+      height: 156px;
+      top: -156px;
+    }
+  }
+  &::after {
+    background: url('../images/bg-section-bottom-mobile-2.svg') no-repeat;
+    @include backgroundElement;
+    height: 101px;
+    bottom: -101px;
+    @include mQ($small) {
+      background-image: url('../images/bg-section-bottom-desktop-2.svg');
+      height: 139px;
+      bottom: -139px;
+    }
+  }
+}
+
+.started {
+  margin-top: 180px;
+  @include mQ($large) {
+    margin-top: 300px;
+  }
+  .btn {
+    margin-top: 30px;
+  }
+}
+
+footer {
+  color: $veryPaleBlue;
+  background-color: #00252E;
+  margin-top: 200px;
+  position: relative;
+  display: grid;
+  @include mQ($large) {
+    margin-top: 300px;
+    grid-template-columns: 28% 42%;
+    grid-column-gap: 8%;
+    justify-content: space-between;
+    font-size: 14px;
+  }
+  &::before {
+    background: url('../images/bg-footer-top-mobile.svg') no-repeat;
+    @include backgroundElement;
+    top: -53px;
+    height: 53px;
+    @include mQ($small) {
+      background-image: url('../images/bg-footer-top-desktop.svg');
+      height: 158px;
+      top: -158px;
+    }
+  }
+}
+
+.info {
+  margin-top: 100px;
+  margin-bottom: 30px;
+  @include mQ($large) {
+    margin: 80px 0 0 0;
+  }
+  .logo {
+    width: 160px;
+    filter: grayscale(1) brightness(0) invert(1);
+    @include mQ($large) {
+      width: 200px;
+    }
+  }
+  &>p {
+    margin: 10px 0 40px;
+    @include mQ($large) {
+      margin: 20px 0;
+    }
+  }
+  .contact > li {
+    display: flex;
+    margin-bottom: 10px;
+    img {
+      object-fit: contain;
+      margin-right: 10px;
+    }
+  }
+}
+
+.newsletter {
+  grid-row: 1;
+  margin-top: 60px;
+  @include mQ($large) {
+    grid-column: 2/3;
+    margin: 80px 0 0 0;
+  }
+  p {
+    padding-right: 10px;
+    @include mQ($large) {
+      padding-right: 30%;
+    }
+  }
+  form {
+    overflow: auto;
+  }
+  input {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    display: block;
+    width: 100%;
+    height: 36px;
+    border: none;
+    border-radius: 4px;
+    box-sizing: border-box;
+    @include mQ($large) {
+      display: inline-block;
+      width: 60%;
+      margin-top: 30px;
+      margin-right: 30px;
+    }
+  }
+  button {
+    color: $veryPaleBlue;
+    background: $pink;
+    display: block;
+    width: 120px;
+    height: 36px;
+    float: right;
+    border: none;
+    border-radius: 4px;
+    box-sizing: border-box;
+    @include mQ($large) {
+      float: none;
+      display: inline-block;
+      width: 30%;
+    }
+  }
+}
+
+.social-media {
+  font-size: 24px;
+  @include mQ($large) {
+    font-size: 30px;
+    margin-top: 40px;
+  }
+  i:nth-child(2) {
+    margin: 0 8px;
+    @include mQ($large) {
+      margin: 0 10px;
+    }
+  }
+}
+
+.attribution {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  font-size: 12px;
+  text-align: center;
+  @include mQ($large) {
+    grid-row: 3;
+    grid-column: 1/span 2;
+    margin-top: 80px;
+  }
+  a {
+    color: $veryPaleBlue;
+  }
+}
