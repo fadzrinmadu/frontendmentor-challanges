@@ -1,0 +1,11 @@
+.button {
+  background: $brightRed;
+  display: block;
+  width: 130px;
+  height: 45px;
+  margin: auto;
+  line-height: 45px;
+  box-sizing: border-box;
+  border-radius: 40px;
+  box-shadow: 0 6px 8px hsla(12, 88%, 59%, 38%);
+}

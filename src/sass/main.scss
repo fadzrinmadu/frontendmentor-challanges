@@ -1,0 +1,17 @@
+// 1 - ABSTRACTS
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+@import 'abstracts/reset';
+
+// 2 - BASE
+@import 'base/typography';
+@import 'base/base';
+
+// 3 - COMPONENTS
+@import 'components/buttons';
+
+// 4 - LAYOUT
+@import 'layout/header';
+@import 'layout/features';
+@import 'layout/testimonials';
+@import 'layout/started';
