@@ -1,0 +1,188 @@
+/* Primary */
+/* Neutral */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  color: white;
+  font-family: "Karla", sans-serif;
+  font-size: 16px;
+  background: #e5eff5;
+}
+
+h2 {
+  font-size: 18px;
+}
+
+.container {
+  width: 80%;
+  margin: 50px auto;
+  box-shadow: 0px 0px 8px rgba(152, 166, 189, 0.3);
+}
+@media screen and (min-width: 992px) {
+  .container {
+    display: grid;
+    width: 48%;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.community,
+.subscription,
+.why-us {
+  padding: 30px 24px;
+}
+@media screen and (min-width: 992px) {
+  .community,
+.subscription,
+.why-us {
+    padding: 60px 40px;
+  }
+}
+
+.community {
+  background: white;
+  border-radius: 4px 4px 0 0;
+}
+@media screen and (min-width: 992px) {
+  .community {
+    grid-column: 1/3;
+    border-radius: 8px 8px 0 0;
+  }
+}
+.community__heading {
+  color: #2ab2af;
+  font-size: 20px;
+  font-weight: 700;
+}
+@media screen and (min-width: 992px) {
+  .community__heading {
+    font-size: 22px;
+  }
+}
+.community__subtitle {
+  color: #c0df34;
+  margin: 24px auto;
+}
+.community__text {
+  color: #98a6bd;
+  font-size: 14px;
+  line-height: 1.6;
+}
+@media screen and (min-width: 992px) {
+  .community__text {
+    font-size: 16px;
+  }
+}
+
+.subscription {
+  background: #2ab2af;
+}
+.subscription__price {
+  margin: 24px 0 16px;
+  color: #e5eff5;
+}
+.subscription__price--highlighted {
+  color: white;
+  font-size: 32px;
+  margin-right: 10px;
+}
+.subscription__text {
+  color: #e5eff5;
+  margin-bottom: 30px;
+}
+.subscription__button {
+  display: block;
+  background: #c0df34;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  width: 100%;
+  height: 46px;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.16);
+}
+.subscription__button:hover {
+  cursor: pointer;
+}
+
+.why-us {
+  background: #2dbebc;
+  border-radius: 0 0 4px 4px;
+}
+.why-us__heading {
+  margin-bottom: 24px;
+}
+.why-us__list-item {
+  color: #e5eff5;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.footer {
+  color: #2ab2af;
+  font-size: 14px;
+  text-align: center;
+  line-height: 1.4;
+  margin-top: 24px;
+  padding: 0 80px;
+}
+
+.attribution {
+  font-size: 12px;
+}
+
+/*# sourceMappingURL=main.css.map */
