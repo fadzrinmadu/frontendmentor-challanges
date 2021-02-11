@@ -1,0 +1,42 @@
+body {
+  color: $grayishBlue;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+}
+
+h1 {
+  color: $darkBlue;
+  font-size: 1.6em;
+  font-weight: 200;
+  line-height: 1.4;
+  @include desktop-style {
+    font-size: 2.4em;
+  }
+  span {
+    color: $darkBlue;
+    font-weight: 600;
+  }
+}
+
+h2 {
+  color: $darkBlue;
+  font-weight: 600;
+  font-size: 1.3em;
+}
+
+.leading {
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+p {
+  font-size: 0.86em;
+  line-height: 1.6;
+}
+
+.attribution {
+  font-size: 0.7em;
+  a {
+    color: $blue;
+  }
+}

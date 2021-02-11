@@ -1,0 +1,75 @@
+@import '_reset';
+@import '_variables';
+@import '_mixins';
+@import '_fonts.scss';
+
+body {
+  background-color: #fff;
+  @include desktop-style { background-color: #fafafa }
+}
+
+.container { padding: 80px 8% }
+
+.title {
+  text-align: center;
+  margin-bottom: 60px;
+  h1 { margin-bottom: 20px }
+  span { display: block }
+  .leading {
+    @include desktop-style { padding: 0 26% }
+  }
+}
+
+.feature-list {
+  display: grid;
+  grid-template-columns: repeat(1, 100%);
+  grid-template-rows: repeat(4, 230px);
+  grid-gap: 30px;
+  justify-content: center;
+  margin-bottom: 60px;
+  @include tablet-style {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 230px);
+  }
+  @include desktop-style {
+    grid-template-columns: repeat(3, 350px);
+    grid-template-rows: repeat(4, (225px / 2));
+    grid-template-areas: 
+    ". two ."
+    "one two four"
+    "one three four"
+    ". three .";
+  }
+  .feature {
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0 8px 16px hsl(212, 86%, 64%, 20%);
+    padding: 24px;
+    position: relative;
+    @include desktop-style { padding: 35px; }
+    &:nth-child(1) {
+      @include desktop-style { grid-area: one; }
+      border-top: 4px solid $cyan;
+    }
+    &:nth-child(2) {
+      @include desktop-style { grid-area: two; }
+      border-top: 4px solid $red;
+    }
+    &:nth-child(3) {
+      @include desktop-style { grid-area: three; }
+      border-top: 4px solid $orange;
+    }
+    &:nth-child(4) {
+      @include desktop-style { grid-area: four; }
+      border-top: 4px solid $blue;
+    }
+  }
+  h2 { margin-bottom: 12px }
+  img {
+    position: absolute;
+    bottom: 35px;
+    right: 35px;
+  }
+}
+
+footer { text-align: center }
