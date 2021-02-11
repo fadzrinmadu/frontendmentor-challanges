@@ -1,0 +1,151 @@
+body {
+  color: $veryDarkBlue;
+  font-family: 'Barlow', sans-serif;
+  font-size: 18px;
+}
+
+h1,
+nav,
+.sub-title,
+.cta {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.container {
+  width: 82%;
+  margin: auto;
+  position: relative;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  margin: 35px 0 60px;
+  .logo { width: 22px; }
+}
+
+.menu-toggle {
+  span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background-color: $veryDarkBlue;
+    margin: 4px 0;
+    transition: transform .3s;
+  }
+  &:hover { cursor: pointer; }
+}
+
+.main-menu {
+  display: block;
+  background: white;
+  width: 100%;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 4px;
+  box-shadow: -4px 8px 8px hsla(230, 29%, 20%, 10%);
+  opacity: 0;
+  transform: rotateX(90deg); 
+  transition: transform .3s;
+  position: absolute;
+  top: 60px;
+  li {
+    padding: 20px 0;
+    margin: 0 30px;
+    &:last-child {
+      color: $grayishBlue;
+      border-top: 1px solid $grayishBlue;
+      padding: 30px 0;
+    }
+    &:hover {
+      a { text-decoration: underline; }
+    }
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
+.checkbox { 
+  display: none;
+  &:checked ~ label > span:first-child { transform: rotate(-45deg) translate(-9px, 4px); }
+  &:checked ~ label > span:last-child { transform: rotate(45deg) translate(-3px, 0px); }
+  &:checked ~ label > span:nth-child(2) { opacity: 0; }
+  &:checked ~ .main-menu { 
+    opacity: 1; 
+    transform: rotateX(0deg);
+  }
+}
+
+.ilustration {
+  margin-bottom: 90px;
+  top: 0;
+  right: 0;
+  z-index: -9999;
+  img { width: 100%; }
+  &::after {
+    content: '';
+    display: block;
+    background: $lightGrayishBlue;
+    width: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 150px;
+    z-index: -9999;
+    border-bottom-left-radius: 50px; 
+  }
+}
+
+main {
+  .sub-title {
+    color: $grayishBlue;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+    span {
+      background: $veryDarkBlue;
+      color: $lightGrayishBlue;
+      display: inline-block;
+      font-weight: bold;
+      letter-spacing: initial;
+      padding: 2px 8px;
+      margin-right: 8px;
+      border-radius: 40px;
+    }
+  }
+  h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  p { line-height: 1.2; }
+  .cta {
+    color: $grayishBlue;
+    margin: 20px 0 60px;
+    letter-spacing: 1px;
+    a {
+      color: $lightGrayishBlue;
+      display: inline-block;
+      background: $red;
+      margin-right: 12px;
+      padding: 12px 18px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 4px;
+      letter-spacing: initial;
+      &:hover {
+        background: hsla(0, 100%, 68%, 80%);
+      }
+    }
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-bottom: 20px;
+  a { color: $red; }
+}

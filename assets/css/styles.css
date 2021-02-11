@@ -1,0 +1,327 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* primary */
+/* neutral */
+body {
+  color: #242942;
+  font-family: "Barlow", sans-serif;
+  font-size: 18px;
+}
+
+h1,
+nav,
+.sub-title,
+.cta {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.container {
+  width: 82%;
+  margin: auto;
+  position: relative;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  margin: 35px 0 60px;
+}
+header .logo {
+  width: 22px;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background-color: #242942;
+  margin: 4px 0;
+  transition: transform 0.3s;
+}
+.menu-toggle:hover {
+  cursor: pointer;
+}
+
+.main-menu {
+  display: block;
+  background: white;
+  width: 100%;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 4px;
+  box-shadow: -4px 8px 8px rgba(36, 41, 66, 0.1);
+  opacity: 0;
+  transform: rotateX(90deg);
+  transition: transform 0.3s;
+  position: absolute;
+  top: 60px;
+}
+.main-menu li {
+  padding: 20px 0;
+  margin: 0 30px;
+}
+.main-menu li:last-child {
+  color: #a0a1ac;
+  border-top: 1px solid #a0a1ac;
+  padding: 30px 0;
+}
+.main-menu li:hover a {
+  text-decoration: underline;
+}
+.main-menu a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.checkbox {
+  display: none;
+}
+.checkbox:checked ~ label > span:first-child {
+  transform: rotate(-45deg) translate(-9px, 4px);
+}
+.checkbox:checked ~ label > span:last-child {
+  transform: rotate(45deg) translate(-3px, 0px);
+}
+.checkbox:checked ~ label > span:nth-child(2) {
+  opacity: 0;
+}
+.checkbox:checked ~ .main-menu {
+  opacity: 1;
+  transform: rotateX(0deg);
+}
+
+.ilustration {
+  margin-bottom: 90px;
+  top: 0;
+  right: 0;
+  z-index: -9999;
+}
+.ilustration img {
+  width: 100%;
+}
+.ilustration::after {
+  content: "";
+  display: block;
+  background: #eef3f6;
+  width: 50%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 150px;
+  z-index: -9999;
+  border-bottom-left-radius: 50px;
+}
+
+main .sub-title {
+  color: #a0a1ac;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+}
+main .sub-title span {
+  background: #242942;
+  color: #eef3f6;
+  display: inline-block;
+  font-weight: bold;
+  letter-spacing: initial;
+  padding: 2px 8px;
+  margin-right: 8px;
+  border-radius: 40px;
+}
+main h1 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+main p {
+  line-height: 1.2;
+}
+main .cta {
+  color: #a0a1ac;
+  margin: 20px 0 60px;
+  letter-spacing: 1px;
+}
+main .cta a {
+  color: #eef3f6;
+  display: inline-block;
+  background: #ff5c5c;
+  margin-right: 12px;
+  padding: 12px 18px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+  letter-spacing: initial;
+}
+main .cta a:hover {
+  background: rgba(255, 92, 92, 0.8);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.attribution a {
+  color: #ff5c5c;
+}
+
+@media screen and (min-width: 992px) {
+  body {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .container:first-child {
+    grid-row: 1;
+    grid-column: 1/3;
+  }
+
+  header .logo {
+    width: 28px;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+
+  .main-menu {
+    background: none;
+    width: auto;
+    opacity: 1;
+    border-radius: 0;
+    box-shadow: none;
+    transform: none;
+    position: initial;
+  }
+  .main-menu ul {
+    display: flex;
+    position: relative;
+  }
+  .main-menu ul::after {
+    content: "";
+    display: block;
+    background: #a0a1ac;
+    opacity: 0.4;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    position: absolute;
+    top: 4px;
+    right: 76px;
+  }
+  .main-menu li {
+    margin: 0;
+    padding: 0;
+    padding-right: 40px;
+  }
+  .main-menu li:last-child {
+    border: none;
+    padding: 0;
+    padding-left: 60px;
+  }
+
+  .ilustration {
+    grid-row: 1;
+    grid-column: 2/3;
+    width: 692px;
+    height: 464px;
+  }
+  .ilustration::after {
+    width: 700px;
+    bottom: 48%;
+  }
+
+  main {
+    grid-row: 2;
+    grid-column: 1/span 2;
+    grid-template-columns: repeat(2, 1fr);
+    display: grid;
+    margin-top: 40px;
+  }
+  main .container {
+    grid-row: 1;
+    grid-column: 1/span 2;
+    margin-top: 40px;
+  }
+  main .sub-title {
+    font-size: 16px;
+  }
+  main h1 {
+    font-size: 52px;
+    padding-right: 52vw;
+  }
+  main p {
+    padding-right: 74%;
+  }
+  main .cta {
+    font-size: 16px;
+    font-weight: normal;
+    letter-spacing: 2px;
+    margin-top: 50px;
+    padding: 0;
+  }
+  main .cta a {
+    padding: 10px 20px;
+    font-weight: bold;
+  }
+
+  footer {
+    grid-row: 3;
+    grid-column: 1/span 2;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
