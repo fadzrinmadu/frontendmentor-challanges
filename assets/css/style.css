@@ -1,0 +1,236 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* neutral */
+body {
+  color: #6d708d;
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  text-align: center;
+  background: #f6f6fe url("../images/bg-top.svg") no-repeat;
+  background-position: 52vw -35px;
+}
+
+.container {
+  width: 86%;
+  margin: auto;
+  padding: 60px 0;
+}
+
+h1 {
+  font-size: 26px;
+  margin-bottom: 30px;
+}
+
+span {
+  color: #b3b5c6;
+}
+
+.switch {
+  position: relative;
+  top: 10px;
+  display: inline-block;
+  width: 54px;
+  height: 30px;
+  margin: 0 20px;
+  background-image: linear-gradient(to right, #a3a8f0, #696fdd);
+  border-radius: 20px;
+}
+.switch:hover {
+  cursor: pointer;
+}
+.switch::after {
+  content: "";
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background-color: white;
+  top: 4px;
+  left: 4px;
+  transition: all 0.3s;
+}
+
+.checkbox {
+  display: none;
+}
+.checkbox:checked + .switch::after {
+  left: 28px;
+}
+.checkbox:checked ~ .pricing .basic-price::before {
+  content: "$19.99";
+}
+.checkbox:checked ~ .pricing .professional-price::before {
+  content: "$24.99";
+}
+.checkbox:checked ~ .pricing .master-price::before {
+  content: "$39.99";
+}
+.checkbox ~ .pricing .basic-price::before {
+  content: "$199.99";
+}
+.checkbox ~ .pricing .professional-price::before {
+  content: "$249.99";
+}
+.checkbox ~ .pricing .master-price::before {
+  content: "$399.99";
+}
+
+.pricing {
+  margin-top: 60px;
+}
+.pricing section {
+  width: 100%;
+  box-sizing: border-box;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 16px rgba(179, 181, 198, 0.32);
+  margin: 30px auto;
+  padding: 40px;
+}
+.pricing section:nth-child(2) {
+  color: white;
+  background-image: linear-gradient(to bottom, #a3a8f0, #696fdd);
+}
+.pricing section:nth-child(2) .price {
+  color: inherit;
+}
+.pricing section:nth-child(2) a {
+  color: #696fdd;
+  background: white;
+}
+.pricing section:nth-child(2) a:hover {
+  color: white;
+  background: #696fdd;
+  border: 1px solid white;
+}
+.pricing h2 {
+  font-size: 18px;
+}
+.pricing .price {
+  color: #494c5f;
+  margin-top: 30px;
+  font-size: 62px;
+}
+.pricing .price::first-letter {
+  font-size: 36px;
+  vertical-align: 8px;
+}
+.pricing ul {
+  margin: 30px 0;
+}
+.pricing li {
+  padding: 18px 0;
+  border-top: 1px solid #b3b5c6;
+}
+.pricing li:last-child {
+  border-bottom: 1px solid #b3b5c6;
+}
+.pricing a {
+  height: 48px;
+  display: block;
+  background-image: linear-gradient(to right, #a3a8f0, #696fdd);
+  color: white;
+  padding: 16px;
+  border-radius: 8px;
+  box-sizing: border-box;
+  text-decoration: none;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 13px;
+}
+.pricing a:hover {
+  color: #696fdd;
+  background: white;
+  border: 1px solid #696fdd;
+}
+
+.attribution {
+  font-size: 12px;
+  line-height: 1.4;
+  margin-top: 40px;
+}
+.attribution a {
+  color: #696fdd;
+}
+
+/* MEDIA QUERIES */
+/* desktop */
+@media screen and (min-width: 992px) {
+  body {
+    background-image: url("../images/bg-top.svg"), url("../images/bg-bottom.svg");
+    background-repeat: no-repeat;
+    background-position: right top, left bottom;
+  }
+
+  .pricing {
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+  }
+  .pricing section {
+    margin: 0;
+    min-width: 200px;
+  }
+  .pricing section .price {
+    font-size: 5vw;
+  }
+  .pricing section:nth-child(2) {
+    padding: 60px;
+    margin-top: -20px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
