@@ -1,0 +1,150 @@
+@import 'reset';
+@import 'variables';
+
+body {
+  background: url('../images/bg-mobile.svg') no-repeat;
+  background-color: $violet;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  text-align: center;
+  line-height: 1.6;
+  color: white;
+}
+
+h1 {
+  font-family: 'Poppins';
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.container {
+  width: 80%;
+  margin: 36px auto;
+}
+
+header {
+  text-align: left;
+  .logo {
+    img { width: 140px; }
+  }
+}
+
+.ilustration {
+  margin-top: 30px;
+  img { width: 100%; }
+}
+
+main {
+  margin-top: 40px;
+  p { margin-top: 18px; }
+  a[role="button"] {
+    width: 200px;
+    height: 42px;
+    background: white;
+    display: block;
+    margin: 24px auto;
+    line-height: 42px;
+    text-decoration: none;
+    font-size: 14px;
+    color: $violet;
+    border-radius: 40px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 26%);
+    box-sizing: border-box;
+    &:hover {
+      color: white;
+      background: $violet;
+      border: 1px solid white;
+      box-shadow: none;
+    }
+  }
+}
+
+.social-media {
+  margin: 60px auto 10px;
+  display: flex;
+  justify-content: center;
+  li {
+    width: 36px;
+    height: 36px;
+    border: 1px solid white;
+    border-radius: 100%;
+    line-height: 36px;
+    &:nth-child(2) {
+      margin: 0 10px;
+    }
+    &:hover {
+      cursor: pointer;
+      background: white;
+      border: 1px solid $violet;
+      a { color: $violet; }
+    }
+  }
+  a {
+    color: white;
+  }
+}
+
+footer {
+  font-size: 12px;
+  text-align: center;
+  a {
+    color: white;
+  }
+}
+
+
+/* MEDIA QUERIES */
+
+/* desktop */
+@media screen and (min-width: 992px) {
+  body {
+    background: url('../images/bg-desktop.svg') no-repeat;
+    background-size: cover;
+    background-color: $violet;
+  }
+
+  header {
+    margin-bottom: 40px;
+    .logo {
+      img { width: 180px; }
+    }
+  }
+
+  .container {
+    width: 90%;
+    margin: 36px auto 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  header {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+  }
+
+  main {
+    text-align: left;
+    padding: 40px 100px 40px 50px;
+    h1 { font-size: 28px; }
+    a[role="button"] {
+      text-align: center;
+      margin-left: 0;
+      width: 180px;
+      height: 50px;
+      line-height: 50px;
+    }
+  }
+
+  .social-media {
+    grid-column: 1 / span 2;
+    grid-row: 3;
+    margin: 10px 0;
+    justify-content: flex-end;
+  }
+
+  footer {
+    grid-column: 1 / span 2;
+    grid-row: 4;
+    text-align: right;
+  }
+}
