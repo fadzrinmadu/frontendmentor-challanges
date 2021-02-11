@@ -1,0 +1,30 @@
+html, body {
+  height: 100%;
+  overflow: auto;
+}
+
+.container {
+  padding-right: 9.067vw;
+  padding-left: 9.067vw;
+}
+
+section {
+  margin-top: 180px;
+}
+
+.illustration {
+  width: 100%;
+}
+
+.leading {
+  margin-top: 20px;
+  margin-bottom: 35px;
+}
+
+.features .leading:first-of-type,
+.extension .leading:first-of-type,
+.faq .leading:first-of-type {
+  @include mQ($lg) {
+    padding: 0 24%;
+  }
+}

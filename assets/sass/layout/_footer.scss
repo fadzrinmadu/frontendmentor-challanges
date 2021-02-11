@@ -1,0 +1,136 @@
+footer {
+  margin-top: 160px;
+}
+
+.contact {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background: $softBlue;
+  color: white;
+  @include mQ($lg) {
+    padding: 60px 0;
+  }
+  span {
+    letter-spacing: .2em;
+    font-size: .70em;
+    text-transform: uppercase;
+    @include mQ($lg) {
+      letter-spacing: .5em;
+    }
+  }
+  h2 {
+    color: inherit;
+    margin: 10px auto 20px;
+    @include mQ($lg) {
+      margin: 30px auto;
+      padding: 0 34%;
+    }
+  }
+  form {
+    @include mQ($lg) {
+      position: relative;
+      width: 37.5%;
+      margin: auto;
+    }
+  }
+  input, button {
+    display: block;
+    width: 100%;
+    @include mQ($lg) {
+      display: inline-block;
+    }
+  }
+  input {
+    height: 50px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 4px;
+    margin-bottom: 12px;
+    padding: 0 20px;
+    @include mQ($lg) {
+      width: 300px;
+      margin-right: 16px;
+    }
+    &::placeholder {
+      color: #d3d3d5;
+      font-size: 1.1em;
+    }
+  }
+  input.invalid {
+    border: 2px solid $softRed;
+    position: relative;
+    background-image: url('../images/icon-error.svg');
+    background-repeat: no-repeat;
+    background-position: right 20px center;
+    padding-right: 60px;
+    &~ .error-message {
+      display: block;
+      text-transform: none;
+      letter-spacing: normal;
+      font-size: 0.60em;
+      font-style: italic;
+      background: $softRed;
+      text-align: left;
+      padding: 8px 10px;
+      border-radius: 0 0 4px 4px;
+      transform: translateY(-20px);
+      box-sizing: border-box;
+      @include mQ($lg) {
+        position: absolute;
+        width: 300px;
+        top: 70px;
+        left: 2px;
+      }
+    }
+  }
+  .button {
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    @include buttonColor($softRed, white);
+    @include mQ($lg) {
+      width: 126px;
+    }
+  }
+}
+
+.info {
+  padding: 40px;
+  background: $veryDarkBlue;
+  color: white;
+  @include mQ($lg) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-between;
+    padding: 10px;
+    padding-right: 9.067vw;
+    padding-left: 9.067vw;
+  }
+}
+
+.nav-footer {
+  @include mQ($lg) {
+    display: flex;
+    align-items: center;
+  }
+  li {
+    padding: 20px 0;
+    @include mQ($lg) {
+      margin-right: 60px;
+    }
+  }
+  a {
+    color: white;
+    text-decoration: none;
+    @include mQ($lg) {
+      color: $grayishBlue;
+      font-size: .90em;
+      &:hover {
+        color: $softRed;
+      }
+    }
+  }
+  svg path {
+    fill: white;
+  }
+}
