@@ -5,6 +5,6 @@
 ![All Projects Frontend Mentor](/preview.jpg)
 
 ## Introduction
-Introducing simpla page website for all my projects from frontendmentor.io, this application is built using html, css and javascript.
+Introducing simple page website for all my projects from frontendmentor.io, this application is built using html, css and javascript.
 
 My Account frontendmentor.io: https://www.frontendmentor.io/profile/fadzrinmadu
