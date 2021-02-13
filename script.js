@@ -62,15 +62,15 @@ projects.forEach(({ name, youtube }, i) => {
 
 	listItem.innerHTML = `
 		<a href="./${name}/index.html">
-			<img src="./${name}/design/desktop-preview.jpg" alt="${name}" />
+			<img src="./projects/${name}/design/desktop-preview.jpg" alt="${name}" />
 			<p>${i + 1}. ${formatProjectName(name)}</p>
 		</a>
 
 		<div class="links-container">
-			<a href="https://github.com/fadzrinmadu/${name}" target="_blank" rel="nonopener" class="gray">
+			<a href="https://github.com/fadzrinmadu/frontendmentor-challanges/projects/${name}" target="_blank" rel="nonopener" class="gray">
 				<i class="fab fa-github"></i>
 			</a>
-			<a href="./${name}/index.html" target="_blank" class="blue">
+			<a href="./projects/${name}/index.html" target="_blank" class="blue">
 				<i class="fas fa-eye"></i>
 			</a>
 		</div>
