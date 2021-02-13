@@ -67,7 +67,7 @@ projects.forEach(({ name, youtube }, i) => {
 		</a>
 
 		<div class="links-container">
-			<a href="https://github.com/fadzrinmadu/frontendmentor-challanges/projects/${name}" target="_blank" rel="nonopener" class="gray">
+			<a href="https://github.com/fadzrinmadu/frontendmentor-challanges/tree/master/projects/${name}" target="_blank" rel="nonopener" class="gray">
 				<i class="fab fa-github"></i>
 			</a>
 			<a href="./projects/${name}/index.html" target="_blank" class="blue">
