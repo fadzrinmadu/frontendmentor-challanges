@@ -9,9 +9,6 @@ const projects = [
 		name: 'clipboard-landing-page',
 	},
 	{
-		name: 'easybank-landing-page',
-	},
-	{
 		name: 'four-card-features-section',
 	},
 	{
@@ -34,9 +31,6 @@ const projects = [
 	},
 	{
 		name: 'intro-component-with-signup-form',
-	},
-	{
-		name: 'manage-landing-page',
 	},
 	{
 		name: 'ping-coming-soon-page',
