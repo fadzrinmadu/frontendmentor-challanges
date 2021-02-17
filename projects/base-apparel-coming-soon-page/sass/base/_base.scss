@@ -1,0 +1,31 @@
+body {
+  color: $desaturatedRed;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 16px;
+  background-color: #fefaf9;
+}
+
+.header {
+  background-color: #fff;
+
+  @include mQ($lg) {
+    position: absolute;
+    width: 100%;
+    margin-top: 40px;
+    background-color: transparent;
+  }
+}
+
+.main {
+  background-color: #fff8f9;
+
+  @include mQ($lg) {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-areas: "intro hero";
+  }
+}
+
+::selection {
+  background: #F0B9BE;
+}

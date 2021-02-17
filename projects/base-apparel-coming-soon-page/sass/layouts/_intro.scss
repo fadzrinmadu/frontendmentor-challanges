@@ -1,0 +1,122 @@
+.intro {
+  grid-area: intro;
+  text-align: center;
+  padding-top: 66px;
+  padding-bottom: 92px;
+
+  @include mQ($lg) {
+    display: flex;
+    text-align: left;
+    align-items: center;
+    background-image: url(../images/bg-pattern-desktop.svg);
+  }
+
+  &__heading {
+    font-size: 38px;
+    font-weight: 200;
+    letter-spacing: 15px;
+    line-height: 110%;
+    text-transform: uppercase;
+
+    @include mQ($lg) {
+      font-size: 58px;
+      margin-top: 46px;
+    }
+
+    span {
+      display: block;
+      color: $darkGrayishRed;
+      font-weight: 600;
+    }
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 160%;
+    margin-top: 16px;
+    margin-bottom: 30px;
+
+    @include mQ($lg) {
+      font-size: 16px;
+      line-height: 200%;
+    }
+  }
+
+  &__form {
+    position: relative;
+    width: 100%;
+    height: 48px;
+    border-radius: 48px;
+    box-sizing: border-box;
+
+    @include mQ($lg) {
+      height: 56px;
+    }
+
+    span {
+      display: inline-block;
+      color: $softRed;
+      margin: 10px auto;
+      margin-left: 16px;
+    }
+  }
+
+  &__form {
+    text-align: left;
+  }
+
+  &__input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: 1px solid #dbcdcd;
+    border-radius: inherit;
+    box-sizing: border-box;
+    padding: 0 120px 0 30px;
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 2px 2px $desaturatedRed;
+    }
+
+    &::placeholder { 
+      color: #d7c7c7; 
+    }
+
+    &.invalid {
+      background-image: url('../images/icon-error.svg');
+      background-repeat: no-repeat;
+      background-position: right 70px center;
+      border: 2px solid $softRed;
+      padding-right: 110px;
+
+      @include mQ($lg) {
+        background-position: right 90px center;
+        padding-right: 120px;
+      }
+    }
+  }
+
+  &__button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 64px;
+    height: 100%;
+    background-color: #f1b1b4;
+    border: none;
+    border-radius: inherit;
+    box-shadow: 0 16px 32px hsla(0, 36%, 70%, 46%);
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.25s;
+
+    &:active {
+      background-color: #facecf;
+    }
+
+    @include mQ($sm) {
+      width: 100px;
+    }
+  }
+}

@@ -1,3 +1,5 @@
+/* Colors */
+/* Break Points */
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -52,156 +54,171 @@ table {
   border-spacing: 0;
 }
 
-/* Colors */
-/* Break Points */
 body {
   color: #ce9797;
   font-family: "Josefin Sans", sans-serif;
   font-size: 16px;
-}
-
-h1 {
-  font-size: 2.5em;
-  font-weight: 200;
-  text-transform: uppercase;
-  letter-spacing: 14px;
-}
-@media screen and (min-width: 992px) {
-  h1 {
-    font-size: 5vw;
-  }
-}
-h1 span {
-  display: block;
-  font-weight: 600;
-  color: #413a3a;
-}
-
-p {
-  font-size: 0.9em;
-  line-height: 1.5;
-}
-@media screen and (min-width: 992px) {
-  p {
-    line-height: 2;
-  }
-}
-
-.attribution {
-  font-size: 11px;
-  text-align: center;
-}
-.attribution a {
-  color: #f96262;
-}
-
-body {
   background-color: #fefaf9;
 }
 
-.wrapper {
-  display: grid;
-  grid-template-columns: 100%;
-}
-@media screen and (min-width: 992px) {
-  .wrapper {
-    grid-template-columns: 52% 48%;
-    grid-template-areas: "header hero" "main hero" "footer hero";
-  }
-}
-
-.container {
-  padding: 30px;
-}
-@media screen and (min-width: 992px) {
-  .container {
-    padding: 8vh 32% 1vh 120px;
-  }
-}
-
-header {
+.header {
   background-color: #fff;
 }
 @media screen and (min-width: 992px) {
-  header {
-    grid-area: header;
-    background: transparent;
+  .header {
+    position: absolute;
+    width: 100%;
+    margin-top: 40px;
+    background-color: transparent;
   }
 }
-header img {
-  width: 100px;
+
+.main {
+  background-color: #fff8f9;
 }
-@media screen and (min-width: 576px) {
-  header img {
-    width: 152px;
+@media screen and (min-width: 992px) {
+  .main {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-areas: "intro hero";
+  }
+}
+
+::selection {
+  background: #F0B9BE;
+}
+
+.container {
+  padding-left: 32px;
+  padding-right: 32px;
+}
+@media screen and (min-width: 992px) {
+  .container {
+    padding-left: 165px;
+    padding-right: 220px;
+  }
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 84px;
+}
+.nav > * {
+  flex-grow: 1;
+}
+.nav__logo {
+  height: 21px;
+}
+@media screen and (min-width: 992px) {
+  .nav__logo {
+    height: 32px;
   }
 }
 
 .hero {
+  grid-area: hero;
   width: 100%;
   height: 250px;
-  overflow: hidden;
-}
-@media screen and (min-width: 576px) {
-  .hero {
-    height: 450px;
-  }
 }
 @media screen and (min-width: 992px) {
   .hero {
-    grid-area: hero;
-    height: auto;
+    width: 100%;
+    max-width: 610px;
+    height: 100vh;
   }
 }
 .hero img {
+  display: inline-block;
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
 }
 
-main {
+.intro {
+  grid-area: intro;
   text-align: center;
-  margin-top: 40px;
+  padding-top: 66px;
+  padding-bottom: 92px;
 }
 @media screen and (min-width: 992px) {
-  main {
-    grid-area: main;
+  .intro {
+    display: flex;
     text-align: left;
-    margin-top: 0;
+    align-items: center;
+    background-image: url(../images/bg-pattern-desktop.svg);
   }
 }
-main p {
-  margin: 20px 0;
+.intro__heading {
+  font-size: 38px;
+  font-weight: 200;
+  letter-spacing: 15px;
+  line-height: 110%;
+  text-transform: uppercase;
 }
 @media screen and (min-width: 992px) {
-  main p {
-    margin: 2vw 0;
+  .intro__heading {
+    font-size: 58px;
+    margin-top: 46px;
   }
 }
-main form {
-  width: 100%;
-  height: 50px;
+.intro__heading span {
+  display: block;
+  color: #413a3a;
+  font-weight: 600;
+}
+.intro__text {
+  font-size: 14px;
+  line-height: 160%;
+  margin-top: 16px;
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 992px) {
+  .intro__text {
+    font-size: 16px;
+    line-height: 200%;
+  }
+}
+.intro__form {
   position: relative;
-  border-radius: 40px;
+  width: 100%;
+  height: 48px;
+  border-radius: 48px;
   box-sizing: border-box;
 }
-main form span {
-  color: #f96262;
-  display: inline-block;
-  margin: 10px auto;
+@media screen and (min-width: 992px) {
+  .intro__form {
+    height: 56px;
+  }
 }
-main input {
+.intro__form span {
+  display: inline-block;
+  color: #f96262;
+  margin: 10px auto;
+  margin-left: 16px;
+}
+.intro__form {
+  text-align: left;
+}
+.intro__input {
   width: 100%;
   height: 100%;
   background: transparent;
-  border: 1px solid #ce9797;
+  border: 1px solid #dbcdcd;
   border-radius: inherit;
-  outline: none;
   box-sizing: border-box;
   padding: 0 120px 0 30px;
 }
-main input::placeholder {
-  color: #ce9797;
+.intro__input:focus {
+  outline: none;
+  box-shadow: 0 0 2px 2px #ce9797;
 }
-main input.invalid {
+.intro__input::placeholder {
+  color: #d7c7c7;
+}
+.intro__input.invalid {
   background-image: url("../images/icon-error.svg");
   background-repeat: no-repeat;
   background-position: right 70px center;
@@ -209,49 +226,32 @@ main input.invalid {
   padding-right: 110px;
 }
 @media screen and (min-width: 992px) {
-  main input.invalid {
+  .intro__input.invalid {
     background-position: right 90px center;
     padding-right: 120px;
   }
 }
-main button {
+.intro__button {
   position: absolute;
   top: 0;
   right: 0;
-  width: 70px;
+  width: 64px;
   height: 100%;
+  background-color: #f1b1b4;
   border: none;
   border-radius: inherit;
-  outline: none;
-  background-image: linear-gradient(135deg, #f8bfbf, #ee8c8c);
   box-shadow: 0 16px 32px rgba(206, 151, 151, 0.46);
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.25s;
+}
+.intro__button:active {
+  background-color: #facecf;
 }
 @media screen and (min-width: 576px) {
-  main button {
-    width: 90px;
-  }
-}
-main button:hover {
-  cursor: pointer;
-  background-image: linear-gradient(135deg, #f8bfbf 100%, #ee8c8c);
-}
-
-@media screen and (min-width: 992px) {
-  footer {
-    grid-area: footer;
-  }
-  footer.container {
-    padding: 0 120px;
-  }
-}
-footer .attribution {
-  margin-bottom: 40px;
-}
-@media screen and (min-width: 992px) {
-  footer .attribution {
-    text-align: left;
-    margin: 10px 0;
+  .intro__button {
+    width: 100px;
   }
 }
 
-/*# sourceMappingURL=index.css.map */
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,19 @@
+.hero {
+  grid-area: hero;
+  width: 100%;
+  height: 250px;
+
+  @include mQ($lg) {
+    width: 100%;
+    max-width: 610px;
+    height: 100vh;
+  }
+
+  img {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+  }
+}

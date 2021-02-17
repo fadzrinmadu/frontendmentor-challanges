@@ -1,0 +1,9 @@
+.container {
+  padding-left: 32px;
+  padding-right: 32px;
+  
+  @include mQ($lg) {
+    padding-left: 165px;
+    padding-right: 220px;
+  }
+}
