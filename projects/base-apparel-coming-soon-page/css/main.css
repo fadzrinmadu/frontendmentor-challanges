@@ -91,9 +91,22 @@ body {
 .container {
   padding-left: 32px;
   padding-right: 32px;
+  max-width: 375px;
+  margin: auto;
+}
+@media screen and (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
 }
 @media screen and (min-width: 992px) {
   .container {
+    max-width: initial;
     padding-left: 165px;
     padding-right: 220px;
   }
@@ -160,8 +173,8 @@ body {
 }
 @media screen and (min-width: 992px) {
   .intro__heading {
-    font-size: 58px;
-    margin-top: 46px;
+    font-size: 62px;
+    margin-top: 70px;
   }
 }
 .intro__heading span {

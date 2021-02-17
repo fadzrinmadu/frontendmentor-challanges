@@ -1,8 +1,19 @@
 .container {
   padding-left: 32px;
   padding-right: 32px;
+  max-width: 375px;
+  margin: auto;
+
+  @include mQ($sm) {
+    max-width: 540px;
+  }
+
+  @include mQ($md) {
+    max-width: 720px;
+  }
   
   @include mQ($lg) {
+    max-width: initial;
     padding-left: 165px;
     padding-right: 220px;
   }
